@@ -1,16 +1,5 @@
-.button {
-  border-color: #484e53;
-  color: #333;
-  font-weight: 500;
-  border-radius: 8px;
-  border-width: 2px;
-  text-transform: none;
-  background-color: transparent;
-  padding: 6px 20px;
-}
-
 .button:hover {
-  background-color: #333;
-  color: #fff;
-  border-color: #333;
+  background-color: #e0e8f6;
+  color: #484e53;
+  border-color: #e0e8f6;
 }

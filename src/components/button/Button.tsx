@@ -9,7 +9,7 @@ type ButtonProps = {
 
 export default function Button({ text }: ButtonProps) {
   return (
-    <MuiButton variant="outlined" className={styles.button}>
+    <MuiButton variant="text" className={styles.button}>
       {text}
     </MuiButton>
   );
