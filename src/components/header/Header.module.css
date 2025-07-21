@@ -1,0 +1,49 @@
+.header {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e0e8f6;
+
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.logo a {
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 4rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.navLink:hover {
+  color: #0070f3;
+}
+
+.activeLink {
+  color: #5b9bd9;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.themeToggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
