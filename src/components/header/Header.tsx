@@ -8,11 +8,11 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Link href="/">💀</Link>
+        <Link href="#hero">💀</Link>
       </div>
 
       <nav className={styles.nav}>
-        <Link href="#home" className={`${styles.navLink} ${styles.activeLink}`}>
+        <Link href="#hero" className={`${styles.navLink} ${styles.activeLink}`}>
           Home
         </Link>
         <Link href="#about" className={styles.navLink}>
