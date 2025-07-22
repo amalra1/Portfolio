@@ -3,5 +3,14 @@
     "name": "Pedro Amaral Chapelin",
     "title": "FullStack developer 🖥️",
     "description": "I like cool things and to make boring stuff cooler."
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Get to know me",
+    "description": [
+      "I'm Pedro, a Full-Stack Developer who also enjoys venturing into various fields, such as Computer Vision and Game Development. My main goal is always to get the most out of everything I do and to help people along the way. I aspire to become someone others seek out when they need help or any insight.",
+      "In every project I'm a part of, I bring a mix of technical expertise (sometimes not as much initially, but it's always built up quickly), commitment, and clear communication. Whether it's presenting improvements, clarifying requirements, or defining action plans, I'm always ready to move forward, regardless of the technology used in the project.",
+      "Let's work together to achieve our goals and learn a lot in the process. Hit me up, and let's get this project going!"
+    ]
   }
 }
