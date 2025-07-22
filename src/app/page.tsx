@@ -1,21 +1,38 @@
-import Header from '../components/header/Header';
+'use client';
+
+import { useRef } from 'react';
+import { useSmoothScroll } from '../hooks/useSmoothScroll';
+import Header from '@/components/header/Header';
+import Hero from '@/components/sections/hero/Hero';
+import portfolioData from '../data/Portfolio.json';
 import styles from './page.module.css';
 
 export default function HomePage() {
-  return (
-    <main className={styles.main}>
-      <Header />
+  const mainRef = useRef<HTMLElement>(null);
+  useSmoothScroll(mainRef);
 
-      <div style={{ padding: '2rem', textAlign: 'center' }}>
-        <div style={{ height: '200vh', paddingTop: '10rem' }}>
-          <h1 style={{ fontSize: '2rem', color: '#333' }}>
-            Conteúdo
-          </h1>
-          <p style={{ color: '#555' }}>
-            Role para baixo para ver que o header acompanha o scroll.
-          </p>
-        </div>
-      </div>
-    </main>
+  return (
+    <>
+      <Header />
+      <main ref={mainRef} className={styles.main}>
+        <section id="hero" className={styles.section}>
+          <Hero data={portfolioData.hero} />
+        </section>
+
+        <section id="about" className={styles.section}>
+          <div className={styles.content}>
+            <h1>About</h1>
+            <p>description</p>
+          </div>
+        </section>
+
+        <section id="projects" className={styles.section}>
+          <div className={styles.content}>
+            <h1>Projects</h1>
+            <p>description</p>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }

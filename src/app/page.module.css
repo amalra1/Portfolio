@@ -1,4 +1,30 @@
 .main {
   background-color: #e0e8f6;
-  min-height: 100vh;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.content {
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 3rem;
+  color: #333;
+}
+
+.content p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 1rem;
 }
