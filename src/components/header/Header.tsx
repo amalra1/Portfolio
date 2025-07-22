@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Button from '@/components/button/Button';
 import styles from './Header.module.css';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 
 export default function Header() {
   return (
@@ -30,7 +31,7 @@ export default function Header() {
 
       <div className={styles.actions}>
         <Button text="Contact" href="" />
-        <div className={styles.themeToggle}>🌙</div>
+        <DarkModeOutlinedIcon className="themeToggle" />
       </div>
     </header>
   );
