@@ -1,0 +1,39 @@
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  color: #333;
+}
+
+.profileImage {
+  border-radius: 50%;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.15);
+}
+
+.name {
+  font-family: var(--font-poppins);
+  font-size: 3rem;
+  margin: 0;
+}
+
+.title {
+  font-family: var(--font-poppins);
+  font-size: 1.5rem;
+  margin: -1rem 0 0 0;
+
+  background: linear-gradient(to right, #4fc3f7, #484e53);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-family: var(--font-poppins);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  overflow-wrap: break-word;
+}
