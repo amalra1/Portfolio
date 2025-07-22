@@ -19,13 +19,13 @@ export default function Header() {
           About
         </Link>
         <Link href="#projects" className={styles.navLink}>
-          Projects
-        </Link>
-        <Link href="#strengths" className={styles.navLink}>
           Strengths
         </Link>
-        <Link href="#work-experiences" className={styles.navLink}>
+        <Link href="#strengths" className={styles.navLink}>
           Work Experiences
+        </Link>
+        <Link href="#work-experiences" className={styles.navLink}>
+          Projects
         </Link>
       </nav>
 
