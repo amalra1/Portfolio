@@ -47,6 +47,11 @@
           "aws-knowledge-cloud-essentials",
           "aws-partner-generative-ai-essentials"
         ]
+      },
+      {
+        "icon": "AutoAwesome",
+        "title": "Generative AI",
+        "description": "Experience with complex concepts of Gen AI, such as RAG, Fine-Tunning, and the different uses of API's."
       }
     ]
   }
