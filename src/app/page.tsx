@@ -6,6 +6,7 @@ import { useActiveSection } from '@/hooks/useActiveSection';
 import Header from '@/components/header/Header';
 import Hero from '@/components/sections/hero/Hero';
 import About from '@/components/sections/about/About';
+import Strengths from '@/components/sections/strengths/Strengths';
 import portfolioData from '../data/Portfolio.json';
 import styles from './page.module.css';
 
@@ -35,10 +36,7 @@ export default function HomePage() {
         </section>
 
         <section id="strengths" className={styles.section}>
-          <div className={styles.content}>
-            <h1>What I know</h1>
-            <p>My strengths</p>
-          </div>
+          <Strengths data={portfolioData.strengths} />
         </section>
 
         <section id="workexperiences" className={styles.section}>

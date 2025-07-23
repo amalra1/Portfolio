@@ -16,7 +16,7 @@
 .subtitle {
   font-family: var(--font-poppins);
   font-size: 1rem;
-  margin: -1rem 0 0 0;
+  margin: 0;
   background: linear-gradient(to right, #4fc3f7, #484e53);
   background-clip: text;
   -webkit-background-clip: text;

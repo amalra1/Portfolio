@@ -12,5 +12,36 @@
       "In every project I'm a part of, I bring a mix of technical expertise (sometimes not as much initially, but it's always built up quickly), commitment, and clear communication. Whether it's presenting improvements, clarifying requirements, or defining action plans, I'm always ready to move forward, regardless of the technology used in the project.",
       "Let's work together to achieve our goals and learn a lot in the process. Hit me up, and let's get this project going!"
     ]
+  },
+  "strengths": {
+    "title": "What I know",
+    "subtitle": "Technical strengths",
+    "skills": [
+      {
+        "icon": "Code",
+        "title": "Web Development",
+        "description": "Experience in Full-Stack development using technologies such as Java for backend, Typescript and React for frontend and many other useful tools."
+      },
+      {
+        "icon": "Visibility",
+        "title": "Computer Vision",
+        "description": "Knowledge in image processing and pattern recognition with OpenCV and Python."
+      },
+      {
+        "icon": "Cached",
+        "title": "Agile Methodologies",
+        "description": "Experience with Scrum and Kanban for efficient project management. Use of efficient tools like Jira and Confluence."
+      },
+      {
+        "icon": "SportsEsports",
+        "title": "Game Development",
+        "description": "Personal projects exploring game logic and mechanics, use of tools like Unity, Allego, and Verilog for hardware manipulation."
+      },
+      {
+        "icon": "Cloud",
+        "title": "Cloud Computing",
+        "description": "Familiarity with AWS services for scalable applications."
+      }
+    ]
   }
 }
