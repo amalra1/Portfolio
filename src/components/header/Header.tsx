@@ -35,8 +35,8 @@ export default function Header({ activeSection }: HeaderProps) {
           Strengths
         </Link>
         <Link
-          href="#workexperiences"
-          className={`${styles.navLink} ${activeSection === 'workexperiences' ? styles.activeLink : ''}`}
+          href="#workExperiences"
+          className={`${styles.navLink} ${activeSection === 'workExperiences' ? styles.activeLink : ''}`}
         >
           Work Experiences
         </Link>

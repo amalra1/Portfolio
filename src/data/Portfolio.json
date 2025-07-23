@@ -54,5 +54,23 @@
         "description": "Experience with complex concepts of Gen AI, such as RAG, Fine-Tunning, and the different uses of API's."
       }
     ]
+  },
+  "workExperiences": {
+    "title": "Where I've been",
+    "subtitle": "Work experiences",
+    "experiences": [
+      {
+        "logo": "ciandt",
+        "company": "CI&T",
+        "dateRange": "March 2025 - Actual",
+        "description": "At CI&T, I applied my knowledge in a hands-on Full-Stack role, actively developing with Java (Spring Boot) on the backend and React on the frontend. I was also exposed to Node.js within a BFF architecture and honed my version control skills using Gitflow. Besides that, it's important to say that I got in contact with many other useful tools, such as Docker, AWS, DBeaver, and etc."
+      },
+      {
+        "logo": "vivo",
+        "company": "VIVO",
+        "dateRange": "August 2023 - February 2025",
+        "description": "During my internship, I built a solid foundation in software architecture and development processes, utilizing agile methodologies (Scrum/Kanban) and tools like Jira and SAP for documentation and change management."
+      }
+    ]
   }
 }
