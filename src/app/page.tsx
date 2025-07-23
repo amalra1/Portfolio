@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import { useSmoothScroll } from '../hooks/useSmoothScroll';
+import { useActiveSection } from '@/hooks/useActiveSection';
 import Header from '@/components/header/Header';
 import Hero from '@/components/sections/hero/Hero';
 import About from '@/components/sections/about/About';
@@ -12,9 +13,18 @@ export default function HomePage() {
   const mainRef = useRef<HTMLElement>(null);
   useSmoothScroll(mainRef);
 
+  const activeSection = useActiveSection([
+    'hero',
+    'about',
+    'strengths',
+    'workexperiences',
+    'projects',
+  ]);
+
   return (
     <>
-      <Header />
+      <Header activeSection={activeSection} />
+
       <main ref={mainRef} className={styles.main}>
         <section id="hero" className={styles.section}>
           <Hero data={portfolioData.hero} />
@@ -24,10 +34,24 @@ export default function HomePage() {
           <About data={portfolioData.about} />
         </section>
 
+        <section id="strengths" className={styles.section}>
+          <div className={styles.content}>
+            <h1>What I know</h1>
+            <p>My strengths</p>
+          </div>
+        </section>
+
+        <section id="workexperiences" className={styles.section}>
+          <div className={styles.content}>
+            <h1>Where I&apos;ve been</h1>
+            <p>Work experiences</p>
+          </div>
+        </section>
+
         <section id="projects" className={styles.section}>
           <div className={styles.content}>
-            <h1>Projects</h1>
-            <p>description</p>
+            <h1>What I&apos;ve done</h1>
+            <p>Some of my work</p>
           </div>
         </section>
       </main>
