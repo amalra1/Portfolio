@@ -40,7 +40,13 @@
       {
         "icon": "Cloud",
         "title": "Cloud Computing",
-        "description": "Familiarity with AWS services for scalable applications."
+        "description": "Familiarity with AWS services for scalable applications.",
+        "badges": [
+          "aws-cloud-quest-cloud-practitioner",
+          "aws-cloud-quest-generative-ai-practitioner",
+          "aws-knowledge-cloud-essentials",
+          "aws-partner-generative-ai-essentials"
+        ]
       }
     ]
   }
