@@ -62,14 +62,69 @@
       {
         "logo": "ciandt",
         "company": "CI&T",
-        "dateRange": "March 2025 - Actual",
-        "description": "At CI&T, I applied my knowledge in a hands-on Full-Stack role, actively developing with Java (Spring Boot) on the backend and React on the frontend. I was also exposed to Node.js within a BFF architecture and honed my version control skills using Gitflow. Besides that, it's important to say that I got in contact with many other useful tools, such as Docker, AWS, DBeaver, and etc."
+        "dateRange": "Software development intern | March 2025 - Actual",
+        "description": "At CI&T, I applied my knowledge in a hands-on Full-Stack role, actively developing with Java (Spring Boot) on the backend and React on the frontend. I was also exposed to Node.js within a BFF architecture and honed my version control skills using Gitflow. Besides that, it's important to say that I got in contact with many other useful tools, such as Docker, AWS, DBeaver, Generative AI and etc."
       },
       {
         "logo": "vivo",
         "company": "VIVO",
-        "dateRange": "August 2023 - February 2025",
+        "dateRange": "Software development intern | August 2023 - February 2025",
         "description": "During my internship, I built a solid foundation in software architecture and development processes, utilizing agile methodologies (Scrum/Kanban) and tools like Jira and SAP for documentation and change management."
+      }
+    ]
+  },
+  "projects": {
+    "title": "What I've done",
+    "subtitle": "Some of my Work",
+    "list": [
+      {
+        "title": "Bodybuilding Poses Classifier",
+        "description": "Powered by Google's MediaPipe library, it detects, analyzes, and classifies bodybuilding poses from images and videos.",
+        "image": "bodybuilding-pose-classifier",
+        "url": "https://github.com/amalra1/BodybuildingPoseClassifier",
+        "category": "Computer Vision"
+      },
+      {
+        "title": "Tattoo Images texture segmentation",
+        "description": "Creation of border detection filters and texture segmentation on tattoo images",
+        "image": "image-texture-segmentation",
+        "url": "https://github.com/amalra1/ImageTextureSegmentation",
+        "category": "Computer Vision"
+      },
+      {
+        "title": "Image Perspective Transformation",
+        "description": "Applies perspective transformation in images, correcting inclined plains or angled photos to generate a rectangular frontal visualization of the selected area.",
+        "image": "perspective-transformation",
+        "url": "https://github.com/amalra1/PerspectiveTransformation",
+        "category": "Computer Vision"
+      },
+      {
+        "title": "Zanagotchi",
+        "description": "Verilog implementation of a tamagotchi to be used in FPGA's.",
+        "image": "zanagotchi",
+        "url": "https://github.com/amalra1/TamagotchiFPGA",
+        "category": "Game Development"
+      },
+      {
+        "title": "Blocks",
+        "description": "Implemented using C language, with <allegro.h> library, candy-crush-like game I made.",
+        "image": "blocks",
+        "url": "https://github.com/amalra1/Blocks",
+        "category": "Game Development"
+      },
+      {
+        "title": "Run from the fake news",
+        "description": "A 1-4 player board game where the main objective is to run from fake news.",
+        "image": "fake-news-game",
+        "url": "https://github.com/amalra1/Fake-News-Game",
+        "category": "Game Development"
+      },
+      {
+        "title": "Polygon Generator",
+        "description": "A polygon generator made with Javascript.",
+        "image": "polygon-generator",
+        "url": "https://github.com/amalra1/PolygonGenerator",
+        "category": "Other"
       }
     ]
   }

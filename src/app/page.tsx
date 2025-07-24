@@ -8,6 +8,7 @@ import Hero from '@/components/sections/hero/Hero';
 import About from '@/components/sections/about/About';
 import Strengths from '@/components/sections/strengths/Strengths';
 import WorkExperiences from '@/components/sections/workExperiences/WorkExperiences';
+import Projects from '@/components/sections/projects/Projects';
 import portfolioData from '../data/Portfolio.json';
 import styles from './page.module.css';
 
@@ -45,10 +46,7 @@ export default function HomePage() {
         </section>
 
         <section id="projects" className={styles.section}>
-          <div className={styles.content}>
-            <h1>What I&apos;ve done</h1>
-            <p>Some of my work</p>
-          </div>
+          <Projects data={portfolioData.projects} />
         </section>
       </main>
     </>
