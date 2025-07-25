@@ -1,7 +1,5 @@
 'use client';
 
-import { useRef } from 'react';
-import { useSmoothScroll } from '../hooks/useSmoothScroll';
 import { useActiveSection } from '@/hooks/useActiveSection';
 import Header from '@/components/header/Header';
 import Hero from '@/components/sections/hero/Hero';
@@ -13,22 +11,20 @@ import portfolioData from '../data/Portfolio.json';
 import styles from './page.module.css';
 
 export default function HomePage() {
-  const mainRef = useRef<HTMLElement>(null);
-  useSmoothScroll(mainRef);
-
-  const activeSection = useActiveSection([
+  const sectionIds = [
     'hero',
     'about',
     'strengths',
-    'workExperiences',
+    'work-experiences',
     'projects',
-  ]);
+  ];
+  const activeSection = useActiveSection(sectionIds);
 
   return (
     <>
       <Header activeSection={activeSection} />
 
-      <main ref={mainRef} className={styles.main}>
+      <main className={styles.main}>
         <section id="hero" className={styles.section}>
           <Hero data={portfolioData.hero} />
         </section>
@@ -41,11 +37,14 @@ export default function HomePage() {
           <Strengths data={portfolioData.strengths} />
         </section>
 
-        <section id="workExperiences" className={styles.section}>
+        <section id="work-experiences" className={styles.section}>
           <WorkExperiences data={portfolioData.workExperiences} />
         </section>
 
-        <section id="projects" className={styles.section}>
+        <section
+          id="projects"
+          className={`${styles.section} ${styles.sectionOverflow}`}
+        >
           <Projects data={portfolioData.projects} />
         </section>
       </main>

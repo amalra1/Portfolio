@@ -2,29 +2,22 @@
   background-color: #e0e8f6;
   height: 100vh;
   overflow-y: scroll;
+
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
 }
 
 .section {
-  height: 100vh;
   scroll-snap-align: start;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  width: 100%;
 }
 
-.content {
-  text-align: center;
-}
-
-.content h1 {
-  font-size: 3rem;
-  color: #333;
-}
-
-.content p {
-  font-size: 1.2rem;
-  color: #555;
-  margin-top: 1rem;
+.sectionOverflow {
+  height: auto;
+  min-height: 100vh;
 }
