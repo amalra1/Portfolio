@@ -16,6 +16,11 @@ import perspectiveTransformationImg from '@/assets/projects/perspective-transfor
 import zanagotchiImg from '@/assets/projects/zanagotchi.png';
 import blocksImg from '@/assets/projects/blocks.png';
 import fakeNewsImg from '@/assets/projects/fake-news-game.png';
+import graphsImg from '@/assets/projects/graphs-processing-library.png';
+import gameOfLifeImg from '@/assets/projects/game-of-life.png';
+import reduxVImg from '@/assets/projects/redux-v.png';
+import fodaSeImg from '@/assets/projects/foda-se.png';
+import portfolioImg from '@/assets/projects/portfolio.png';
 
 const imageMap: { [key: string]: StaticImageData } = {
   'polygon-generator': polygonImg,
@@ -25,6 +30,11 @@ const imageMap: { [key: string]: StaticImageData } = {
   zanagotchi: zanagotchiImg,
   blocks: blocksImg,
   'fake-news-game': fakeNewsImg,
+  'graphs-processing-library': graphsImg,
+  'game-of-life': gameOfLifeImg,
+  'redux-v': reduxVImg,
+  'foda-se': fodaSeImg,
+  portfolio: portfolioImg,
 };
 
 type Project = {

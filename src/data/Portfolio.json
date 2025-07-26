@@ -121,6 +121,41 @@
         "category": "Game Development"
       },
       {
+        "title": "F*da-se",
+        "description": "Card game implemented in a Ring Network using C language, up to 4 players (if connected by the same LAN network).",
+        "image": "foda-se",
+        "url": "https://github.com/amalra1/F.da-seGame",
+        "category": "Game Development"
+      },
+      {
+        "title": "Portfolio",
+        "description": "This very website you're on",
+        "image": "portfolio",
+        "url": "https://github.com/amalra1/Portfolio",
+        "category": "Web Development"
+      },
+      {
+        "title": "Graphs processing library",
+        "description": "Series of functions to extract information of a given graph",
+        "image": "graphs-processing-library",
+        "url": "https://github.com/amalra1/Graphs-Processing-Library",
+        "category": "Other"
+      },
+      {
+        "title": "Game of Life",
+        "description": "Implementation of Conway's Game of Life, alongside with an AI driven technique to revert a best previous state of the game, with fewer alive cells.",
+        "image": "game-of-life",
+        "url": "https://github.com/amalra1/GameOfLife",
+        "category": "Other"
+      },
+      {
+        "title": "Redux-V",
+        "description": "A processor made with Verilog.",
+        "image": "redux-v",
+        "url": "https://github.com/amalra1/Redux-V",
+        "category": "Other"
+      },
+      {
         "title": "Polygon Generator",
         "description": "A polygon generator made with Javascript.",
         "image": "polygon-generator",
