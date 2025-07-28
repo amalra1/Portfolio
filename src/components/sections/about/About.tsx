@@ -24,7 +24,7 @@ export default function About({ data }: AboutProps) {
         ))}
       </div>
 
-      <Button text="Download Resume" href="" />
+      {/* <Button text="Download Resume" href="" /> */}
     </div>
   );
 }

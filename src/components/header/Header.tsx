@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import Button from '@/components/button/Button';
 import styles from './Header.module.css';
-import NightsStayIcon from '@mui/icons-material/NightsStay';
+//import NightsStayIcon from '@mui/icons-material/NightsStay';
 
 type HeaderProps = {
   activeSection: string;
@@ -52,7 +51,7 @@ export default function Header({ activeSection }: HeaderProps) {
         <Link href="#contact" className={styles.contactLink}>
           Contact
         </Link>
-        <NightsStayIcon className={styles.themeToggle} />
+        {/* <NightsStayIcon className={styles.themeToggle} /> */}
       </div>
     </header>
   );
