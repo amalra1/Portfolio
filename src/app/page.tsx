@@ -7,6 +7,7 @@ import About from '@/components/sections/about/About';
 import Strengths from '@/components/sections/strengths/Strengths';
 import WorkExperiences from '@/components/sections/workExperiences/WorkExperiences';
 import Projects from '@/components/sections/projects/Projects';
+import Contact from '@/components/sections/contact/Contact';
 import portfolioData from '../data/Portfolio.json';
 import styles from './page.module.css';
 
@@ -15,8 +16,9 @@ export default function HomePage() {
     'hero',
     'about',
     'strengths',
-    'work-experiences',
+    'workExperiences',
     'projects',
+    'contact',
   ];
   const activeSection = useActiveSection(sectionIds);
 
@@ -37,7 +39,7 @@ export default function HomePage() {
           <Strengths data={portfolioData.strengths} />
         </section>
 
-        <section id="work-experiences" className={styles.section}>
+        <section id="workExperiences" className={styles.section}>
           <WorkExperiences data={portfolioData.workExperiences} />
         </section>
 
@@ -46,6 +48,10 @@ export default function HomePage() {
           className={`${styles.section} ${styles.sectionOverflow}`}
         >
           <Projects data={portfolioData.projects} />
+        </section>
+
+        <section id="contact" className={styles.section}>
+          <Contact data={portfolioData.contact} />
         </section>
       </main>
     </>

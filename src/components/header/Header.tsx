@@ -49,7 +49,9 @@ export default function Header({ activeSection }: HeaderProps) {
       </nav>
 
       <div className={styles.actions}>
-        <Button text="Contact" href="#contact" />
+        <Link href="#contact" className={styles.contactLink}>
+          Contact
+        </Link>
         <NightsStayIcon className={styles.themeToggle} />
       </div>
     </header>

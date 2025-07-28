@@ -163,5 +163,26 @@
         "category": "Other"
       }
     ]
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "email": "chapelinpedro@gmail.com",
+    "socials": [
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/pedro-amaral-chapelin/",
+        "icon": "LinkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/amalra1",
+        "icon": "GitHub"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/_amalra/",
+        "icon": "Instagram"
+      }
+    ]
   }
 }
