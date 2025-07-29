@@ -2,8 +2,7 @@
   background-color: #e0e8f6;
   height: 100vh;
   overflow-y: scroll;
-
-  scroll-snap-type: y proximity;
+  scroll-snap-align: start;
   scroll-behavior: smooth;
 }
 
@@ -18,7 +17,6 @@
 
 .section {
   scroll-snap-align: start;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,12 +29,13 @@
   min-height: 100vh;
 }
 
-@media (max-width: 768px) {
-  .main {
-    scroll-snap-type: none;
-  }
+.sectionFooter {
+  margin-bottom: 0;
+  align-items: flex-end;
+}
 
+@media (max-width: 768px) {
   .section {
-    margin-bottom: 180%;
+    margin-bottom: 80%;
   }
 }
