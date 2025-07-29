@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './Hero.module.css';
-import Button from '@/components/button/Button';
+import Link from 'next/link';
 import profileImage from '@/assets/images/foto-mais-profissional.jpeg';
 
 type HeroData = {
@@ -29,7 +29,9 @@ export default function Hero({ data }: HeroProps) {
 
       <p className={styles.description}>{data.description}</p>
 
-      <Button text="Contact Me" href="" />
+      <Link href="#contact" className={styles.contactButton}>
+        Contact Me
+      </Link>
     </div>
   );
 }

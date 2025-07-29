@@ -3,5 +3,186 @@
     "name": "Pedro Amaral Chapelin",
     "title": "FullStack developer 🖥️",
     "description": "I like cool things and to make boring stuff cooler."
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Get to know me",
+    "description": [
+      "I'm Pedro, a Full-Stack Developer who also enjoys venturing into many other areas beside web development, such as Computer Vision and Game Development. My main goal is always to get the most out of everything I do and to help people along the way. I aspire to become someone others seek out when they need help or any insight.",
+      "In every project I'm a part of, I bring a mix of technical expertise (sometimes not as much initially, but it's always built up quickly), commitment, and clear communication. Whether it's presenting improvements, clarifying requirements, or defining action plans, I'm always ready to move forward, regardless of the technology used in the project.",
+      "Let's work together to achieve our goals and learn a lot in the process. Hit me up, and let's get this project going!"
+    ]
+  },
+  "strengths": {
+    "title": "What I know",
+    "subtitle": "Technical strengths",
+    "skills": [
+      {
+        "icon": "Code",
+        "title": "Web Development",
+        "description": "Experience in Full-Stack development using technologies such as Java for backend, Typescript and React for frontend and many other useful tools."
+      },
+      {
+        "icon": "Visibility",
+        "title": "Computer Vision",
+        "description": "Knowledge in image processing and pattern recognition with OpenCV and Python."
+      },
+      {
+        "icon": "Cached",
+        "title": "Agile Methodologies",
+        "description": "Experience with Scrum and Kanban for efficient project management. Use of efficient tools like Jira and Confluence."
+      },
+      {
+        "icon": "SportsEsports",
+        "title": "Game Development",
+        "description": "Personal projects exploring game logic and mechanics, use of tools like Unity, Allego, and Verilog for hardware manipulation."
+      },
+      {
+        "icon": "Cloud",
+        "title": "Cloud Computing",
+        "description": "Familiarity with AWS services for scalable applications.",
+        "badges": [
+          "aws-cloud-quest-cloud-practitioner",
+          "aws-cloud-quest-generative-ai-practitioner",
+          "aws-knowledge-cloud-essentials",
+          "aws-partner-generative-ai-essentials",
+          "aws-cloud-quest-generative-ai-architect"
+        ]
+      },
+      {
+        "icon": "AutoAwesome",
+        "title": "Generative AI",
+        "description": "Experience with complex concepts of Gen AI, such as RAG, Fine-Tunning, and the different uses of API's."
+      }
+    ]
+  },
+  "workExperiences": {
+    "title": "Where I've been",
+    "subtitle": "Work experiences",
+    "experiences": [
+      {
+        "logo": "ciandt",
+        "company": "CI&T",
+        "dateRange": "Software development intern | March 2025 - Actual",
+        "description": "At CI&T, I applied my knowledge in a hands-on Full-Stack role, actively developing with Java (Spring Boot) on the backend and React on the frontend. I was also exposed to Node.js within a BFF architecture and honed my version control skills using Gitflow. Besides that, it's important to say that I got in contact with many other useful tools, such as Docker, AWS, DBeaver, Generative AI and etc."
+      },
+      {
+        "logo": "vivo",
+        "company": "VIVO",
+        "dateRange": "Software development intern | August 2023 - February 2025",
+        "description": "During my internship, I built a solid foundation in software architecture and development processes, utilizing agile methodologies (Scrum/Kanban) and tools like Jira and SAP for documentation and change management."
+      }
+    ]
+  },
+  "projects": {
+    "title": "What I've done",
+    "subtitle": "Some of my Work",
+    "list": [
+      {
+        "title": "Bodybuilding Poses Classifier",
+        "description": "Powered by Google's MediaPipe library, it detects, analyzes, and classifies bodybuilding poses from images and videos.",
+        "image": "bodybuilding-pose-classifier",
+        "url": "https://github.com/amalra1/BodybuildingPoseClassifier",
+        "category": "Computer Vision"
+      },
+      {
+        "title": "Tattoo Images texture segmentation",
+        "description": "Creation of border detection filters and texture segmentation on tattoo images",
+        "image": "image-texture-segmentation",
+        "url": "https://github.com/amalra1/ImageTextureSegmentation",
+        "category": "Computer Vision"
+      },
+      {
+        "title": "Image Perspective Transformation",
+        "description": "Applies perspective transformation in images, correcting inclined plains or angled photos to generate a rectangular frontal visualization of the selected area.",
+        "image": "perspective-transformation",
+        "url": "https://github.com/amalra1/PerspectiveTransformation",
+        "category": "Computer Vision"
+      },
+      {
+        "title": "Zanagotchi",
+        "description": "Verilog implementation of a tamagotchi to be used in FPGA's.",
+        "image": "zanagotchi",
+        "url": "https://github.com/amalra1/TamagotchiFPGA",
+        "category": "Game Development"
+      },
+      {
+        "title": "Blocks",
+        "description": "Implemented using C language, with <allegro.h> library, candy-crush-like game I made.",
+        "image": "blocks",
+        "url": "https://github.com/amalra1/Blocks",
+        "category": "Game Development"
+      },
+      {
+        "title": "Run from the fake news",
+        "description": "A 1-4 player board game where the main objective is to run from fake news.",
+        "image": "fake-news-game",
+        "url": "https://github.com/amalra1/Fake-News-Game",
+        "category": "Game Development"
+      },
+      {
+        "title": "F*da-se",
+        "description": "Card game implemented in a Ring Network using C language, up to 4 players (if connected by the same LAN network).",
+        "image": "foda-se",
+        "url": "https://github.com/amalra1/F.da-seGame",
+        "category": "Game Development"
+      },
+      {
+        "title": "Portfolio",
+        "description": "This very website you're on",
+        "image": "portfolio",
+        "url": "",
+        "category": "Web Development"
+      },
+      {
+        "title": "Graphs processing library",
+        "description": "Series of functions to extract information of a given graph",
+        "image": "graphs-processing-library",
+        "url": "https://github.com/amalra1/Graphs-Processing-Library",
+        "category": "Other"
+      },
+      {
+        "title": "Game of Life",
+        "description": "Implementation of Conway's Game of Life, alongside with an AI driven technique to revert a best previous state of the game, with fewer alive cells.",
+        "image": "game-of-life",
+        "url": "https://github.com/amalra1/GameOfLife",
+        "category": "Other"
+      },
+      {
+        "title": "Redux-V",
+        "description": "A processor made with Verilog.",
+        "image": "redux-v",
+        "url": "https://github.com/amalra1/Redux-V",
+        "category": "Other"
+      },
+      {
+        "title": "Polygon Generator",
+        "description": "A polygon generator made with Javascript.",
+        "image": "polygon-generator",
+        "url": "https://github.com/amalra1/PolygonGenerator",
+        "category": "Other"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "email": "chapelinpedro@gmail.com",
+    "socials": [
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/pedro-amaral-chapelin/",
+        "icon": "LinkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/amalra1",
+        "icon": "GitHub"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/_amalra/",
+        "icon": "Instagram"
+      }
+    ]
   }
 }
