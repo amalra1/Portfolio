@@ -30,3 +30,13 @@
   height: auto;
   min-height: 100vh;
 }
+
+@media (max-width: 768px) {
+  .main {
+    scroll-snap-type: none;
+  }
+
+  .section {
+    margin-bottom: 180%;
+  }
+}
