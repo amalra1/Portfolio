@@ -11,7 +11,7 @@ export default function Header({ activeSection }: HeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Link href="#hero">💀</Link>
+        <Link href="#hero">👹</Link>
       </div>
 
       <nav className={styles.nav}>
