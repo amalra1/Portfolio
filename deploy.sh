@@ -21,19 +21,16 @@ fi
 echo -e "${GREEN}Build completed successfully! 'out' folder generated.${NC}"
 
 echo -e "\n${YELLOW}[2/4] Cleaning the remote directory (${REMOTE_DIR})...${NC}"
-echo "Enter password to connect via SSH."
 ssh ${SSH_USER}@${SSH_HOST} "rm -rf ${REMOTE_DIR}*"
 
 echo -e "${GREEN}Remote directory cleaned.${NC}"
 
 echo -e "\n${YELLOW}[3/4] Uploading new files from the 'out' folder to the server...${NC}"
-echo "Enter password again for SCP."
 scp -r out/* ${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}
 
 echo -e "${GREEN}Files uploaded successfully.${NC}"
 
 echo -e "\n${YELLOW}[4/4] Adjusting file and folder permissions on the server...${NC}"
-echo "Enter password one last time for SSH."
 ssh ${SSH_USER}@${SSH_HOST} "find ${REMOTE_DIR} -type d -exec chmod 755 {} \; && find ${REMOTE_DIR} -type f -exec chmod 644 {} \;"
 
 echo -e "\n${GREEN}Permissions adjusted! Deploy completed successfully! ${NC}"
