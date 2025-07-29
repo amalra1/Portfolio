@@ -27,7 +27,7 @@ export default function HomePage() {
       <Header activeSection={activeSection} />
 
       <main className={styles.main}>
-        <section id="hero" className={styles.section}>
+        <section id="hero" className={styles.heroSection}>
           <Hero data={portfolioData.hero} />
         </section>
 

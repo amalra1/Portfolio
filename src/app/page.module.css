@@ -7,13 +7,22 @@
   scroll-behavior: smooth;
 }
 
+.heroSection {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .section {
   scroll-snap-align: start;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  margin-bottom: 15%;
   width: 100%;
 }
 

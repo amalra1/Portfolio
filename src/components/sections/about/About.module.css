@@ -10,13 +10,11 @@
 .title {
   font-family: var(--font-poppins);
   font-size: 3rem;
-  margin: 0;
 }
 
 .subtitle {
   font-family: var(--font-poppins);
   font-size: 1rem;
-  margin: 0;
   background: linear-gradient(to right, #4fc3f7, #484e53);
   background-clip: text;
   -webkit-background-clip: text;
@@ -30,7 +28,6 @@
 
   max-width: 600px;
   margin-top: 1rem;
-  margin-bottom: 1.5rem;
 }
 
 .descriptionContainer p {
