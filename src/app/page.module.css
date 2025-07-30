@@ -16,22 +16,30 @@
 }
 
 .section {
-  scroll-snap-align: start;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 15%;
   width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .sectionOverflow {
-  height: auto;
-  min-height: 100vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 .sectionFooter {
-  margin-bottom: 0;
-  align-items: flex-end;
+  min-height: auto; 
+  justify-content: flex-end;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
