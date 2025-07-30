@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { poppins } from './fonts';
 import ThemeRegistry from '@/components/ThemeRegistry';
+import { LanguageProvider } from '@/contexts/LanguageContext';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -19,7 +20,9 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${inter.className} ${poppins.variable}`}>
-        <ThemeRegistry>{children}</ThemeRegistry>
+        <LanguageProvider>
+          <ThemeRegistry>{children}</ThemeRegistry>
+        </LanguageProvider>
       </body>
     </html>
   );

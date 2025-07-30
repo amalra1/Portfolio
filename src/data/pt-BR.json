@@ -1,0 +1,204 @@
+{
+  "hero": {
+    "name": "Pedro Amaral Chapelin",
+    "title": "Desenvolvedor FullStack 🖥️",
+    "description": "Curto coisas maneiras e transformar o que é chato mais legal.",
+    "contactButton": "Fale Comigo"
+  },
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "strengths": "Habilidades",
+    "workExperiences": "Experiências",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "about": {
+    "title": "Sobre",
+    "subtitle": "Um pouco sobre mim",
+    "description": [
+      "Sou o Pedro, um Desenvolvedor Full-Stack que também gosta de se aventurar em diversas outras áreas além de desenvolvimento web, como Visão Computacional e Desenvolvimento de Jogos. Meu principal objetivo é sempre extrair o máximo de tudo o que faço e ajudar as pessoas no caminho. Aspiro me tornar alguém que os outros procuram quando precisam de ajuda ou de alguma ideia.",
+      "Em cada projeto do qual faço parte, trago uma mistura de domínio técnico (às vezes nem tanto inicialmente, mas que é sempre construído rapidamente), comprometimento e comunicação clara. Seja apresentando melhorias, esclarecendo requisitos ou definindo planos de ação, estou sempre pronto para seguir em frente, independentemente da tecnologia utilizada no projeto.",
+      "Vamos trabalhar juntos para atingir nossos objetivos e aprender muito no processo. Me chame pra gente começar essa parada!"
+    ]
+  },
+  "strengths": {
+    "title": "O que sei",
+    "subtitle": "Minhas habilidades técnicas",
+    "skills": [
+      {
+        "icon": "Code",
+        "title": "Desenvolvimento Web",
+        "description": "Experiência em desenvolvimento Full-Stack utilizando tecnologias como Java para o backend, Typescript e React para o frontend e muitas outras ferramentas úteis."
+      },
+      {
+        "icon": "Visibility",
+        "title": "Visão Computacional",
+        "description": "Conhecimento em processamento de imagens e reconhecimento de padrões com OpenCV e Python."
+      },
+      {
+        "icon": "Cached",
+        "title": "Metodologias Ágeis",
+        "description": "Experiência com Scrum e Kanban para um gerenciamento de projetos eficiente. Uso de ferramentas como Jira e Confluence."
+      },
+      {
+        "icon": "SportsEsports",
+        "title": "Desenvolvimento de Jogos",
+        "description": "Projetos pessoais explorando lógica e mecânicas de jogos, uso de ferramentas como Unity, Allegro e Verilog para manipulação de hardware."
+      },
+      {
+        "icon": "Cloud",
+        "title": "Computação em Nuvem",
+        "description": "Familiaridade com serviços da AWS para aplicações escaláveis.",
+        "badges": [
+          "aws-cloud-quest-cloud-practitioner",
+          "aws-cloud-quest-generative-ai-practitioner",
+          "aws-knowledge-cloud-essentials",
+          "aws-partner-generative-ai-essentials",
+          "aws-cloud-quest-generative-ai-architect"
+        ]
+      },
+      {
+        "icon": "AutoAwesome",
+        "title": "IA Generativa",
+        "description": "Experiência com conceitos complexos de IA Generativa, como RAG, Fine-Tuning e os diferentes usos de APIs."
+      }
+    ]
+  },
+  "workExperiences": {
+    "title": "Por onde estive",
+    "subtitle": "Minhas experiências profissionais",
+    "experiences": [
+      {
+        "logo": "ciandt",
+        "company": "CI&T",
+        "dateRange": "Estagiário de desenvolvimento de software | Março 2025 - Atualmente",
+        "description": "Na CI&T, apliquei meu conhecimento em um papel prático de Full-Stack, desenvolvendo ativamente com Java (Spring Boot) no backend e React no frontend. Também tive contato com Node.js em uma arquitetura BFF e aprimorei minhas habilidades de controle de versão com Gitflow. Além disso, é importante dizer que tive contato com muitas outras ferramentas úteis, como Docker, AWS, DBeaver, IA Generativa, etc."
+      },
+      {
+        "logo": "vivo",
+        "company": "VIVO",
+        "dateRange": "Estagiário de desenvolvimento de software | Agosto 2023 - Fevereiro 2025",
+        "description": "Durante meu estágio, construí uma base sólida em arquitetura de software e processos de desenvolvimento, utilizando metodologias ágeis (Scrum/Kanban) e ferramentas como Jira e SAP para documentação e gestão de mudanças."
+      }
+    ]
+  },
+  "projects": {
+    "title": "O que fiz",
+    "subtitle": "Alguns dos meus trabalhos",
+    "categories": {
+      "computerVision": "Visão Computacional",
+      "gameDev": "Desenvolvimento de Jogos",
+      "webDev": "Desenvolvimento Web",
+      "other": "Outros",
+      "all": "Tudo"
+    },
+    "list": [
+      {
+        "title": "Classificador de poses de fisiculturismo",
+        "description": "Utilizando a biblioteca MediaPipe do Google, detecta, analisa e classifica poses de musculação a partir de imagens e vídeos.",
+        "image": "bodybuilding-pose-classifier",
+        "url": "https://github.com/amalra1/BodybuildingPoseClassifier",
+        "category": "Visão Computacional"
+      },
+      {
+        "title": "Segmentação de textura em imagens de tatuagens",
+        "description": "Criação de filtros de detecção de bordas e segmentação de textura em imagens de tatuagens.",
+        "image": "image-texture-segmentation",
+        "url": "https://github.com/amalra1/ImageTextureSegmentation",
+        "category": "Visão Computacional"
+      },
+      {
+        "title": "Transformação de perspectiva em imagens",
+        "description": "Aplica transformação de perspectiva em imagens, corrigindo planos inclinados ou fotos em ângulo para gerar uma visualização frontal retangular da área selecionada.",
+        "image": "perspective-transformation",
+        "url": "https://github.com/amalra1/PerspectiveTransformation",
+        "category": "Visão Computacional"
+      },
+      {
+        "title": "Zanagotchi",
+        "description": "Implementação de um tamagotchi em Verilog para ser usado em FPGAs.",
+        "image": "zanagotchi",
+        "url": "https://github.com/amalra1/TamagotchiFPGA",
+        "category": "Desenvolvimento de Jogos"
+      },
+      {
+        "title": "Blocks",
+        "description": "Jogo no estilo Candy Crush que fiz, implementado em linguagem C com a biblioteca <allegro.h>.",
+        "image": "blocks",
+        "url": "https://github.com/amalra1/Blocks",
+        "category": "Desenvolvimento de Jogos"
+      },
+      {
+        "title": "Corra das fake news",
+        "description": "Um jogo de tabuleiro para 1-4 jogadores onde o objetivo principal é fugir das fake news.",
+        "image": "fake-news-game",
+        "url": "https://github.com/amalra1/Fake-News-Game",
+        "category": "Desenvolvimento de Jogos"
+      },
+      {
+        "title": "F*da-se",
+        "description": "Jogo de cartas implementado em uma Rede em Anel usando linguagem C, para até 4 jogadores (se conectados na mesma rede LAN).",
+        "image": "foda-se",
+        "url": "https://github.com/amalra1/F.da-seGame",
+        "category": "Desenvolvimento de Jogos"
+      },
+      {
+        "title": "Portfólio",
+        "description": "Este mesmo site em que você está.",
+        "image": "portfolio",
+        "url": "",
+        "category": "Desenvolvimento Web"
+      },
+      {
+        "title": "Biblioteca de processamento de grafos",
+        "description": "Série de funções para extrair informações de um determinado grafo.",
+        "image": "graphs-processing-library",
+        "url": "https://github.com/amalra1/Graphs-Processing-Library",
+        "category": "Outros"
+      },
+      {
+        "title": "Jogo da vida",
+        "description": "Implementação do Jogo da vida de Conway, junto com uma técnica de IA para reverter para o melhor estado anterior do jogo, com menos células vivas.",
+        "image": "game-of-life",
+        "url": "https://github.com/amalra1/GameOfLife",
+        "category": "Outros"
+      },
+      {
+        "title": "Redux-V",
+        "description": "Um processador feito com Verilog.",
+        "image": "redux-v",
+        "url": "https://github.com/amalra1/Redux-V",
+        "category": "Outros"
+      },
+      {
+        "title": "Gerador de polígonos",
+        "description": "Um gerador de polígonos feito com Javascript.",
+        "image": "polygon-generator",
+        "url": "https://github.com/amalra1/PolygonGenerator",
+        "category": "Outros"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Vamos trabalhar juntos",
+    "email": "chapelinpedro@gmail.com",
+    "socials": [
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/pedro-amaral-chapelin/",
+        "icon": "LinkedIn"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/amalra1",
+        "icon": "GitHub"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/_amalra/",
+        "icon": "Instagram"
+      }
+    ]
+  }
+}

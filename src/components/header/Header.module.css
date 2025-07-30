@@ -8,6 +8,7 @@
   position: fixed;
   top: 0;
   z-index: 10;
+  position: fixed;
 }
 
 .logo a {
@@ -22,6 +23,10 @@
 }
 
 .nav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   gap: 4rem;
 }
@@ -62,17 +67,28 @@
   display: none;
 }
 
+.languageSwitchDesktop {
+  display: flex;
+  align-items: center;
+}
+
+.languageSwitchMobile {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .nav {
     position: fixed;
     top: 0;
     right: 0;
+    left: auto;
+    top: 0;
+    transform: translateX(100%);
     height: 100vh;
     width: 70vw;
     max-width: 300px;
     background-color: #e0e8f6;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     flex-direction: column;
     justify-content: center;
@@ -110,5 +126,14 @@
     border: 1.5px solid #555;
     border-radius: 8px;
     color: #333;
+  }
+
+  .languageSwitchDesktop {
+    display: none;
+  }
+
+  .languageSwitchMobile {
+    display: block;
+    margin-top: 2rem;
   }
 }

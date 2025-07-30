@@ -1,0 +1,19 @@
+.switchContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.label {
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #888;
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.activeLabel {
+  color: #333;
+  font-weight: bold;
+}
