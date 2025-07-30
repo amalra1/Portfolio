@@ -16,6 +16,7 @@ type Project = {
 type ProjectsData = {
   title: string;
   subtitle: string;
+  categories: { [key: string]: string };
   list: Project[];
 };
 
@@ -24,17 +25,14 @@ type ProjectsProps = {
 };
 
 export default function Projects({ data }: ProjectsProps) {
-  const [activeCategory, setActiveCategory] = useState('Computer Vision');
+  const [activeCategoryKey, setActiveCategoryKey] = useState('computerVision');
 
-  const categories = [
-    ...Array.from(new Set(data.list.map((p) => p.category))),
-    'All',
-  ];
+  const activeCategoryText = data.categories[activeCategoryKey];
 
   const filteredProjects =
-    activeCategory === 'All'
+    activeCategoryKey === 'all'
       ? data.list
-      : data.list.filter((p) => p.category === activeCategory);
+      : data.list.filter((p) => p.category === activeCategoryText);
 
   return (
     <div className={styles.projectsContent}>
@@ -42,14 +40,16 @@ export default function Projects({ data }: ProjectsProps) {
       <h2 className={styles.subtitle}>{data.subtitle}</h2>
 
       <div className={styles.filterContainer}>
-        {categories.map((category) => (
+        {Object.keys(data.categories).map((categoryKey) => (
           <Button
-            key={category}
-            variant={activeCategory === category ? 'contained' : 'outlined'}
-            onClick={() => setActiveCategory(category)}
-            sx={{ borderRadius: '20px', textTransform: 'none' }}
+            key={categoryKey}
+            variant={
+              activeCategoryKey === categoryKey ? 'contained' : 'outlined'
+            }
+            onClick={() => setActiveCategoryKey(categoryKey)}
+            className={styles.filterButton}
           >
-            {category}
+            {data.categories[categoryKey]}
           </Button>
         ))}
       </div>

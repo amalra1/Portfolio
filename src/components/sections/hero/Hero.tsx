@@ -8,6 +8,7 @@ type HeroData = {
   name: string;
   title: string;
   description: string;
+  contactButton: string;
 };
 
 type HeroProps = {
@@ -30,7 +31,7 @@ export default function Hero({ data }: HeroProps) {
       <p className={styles.description}>{data.description}</p>
 
       <Link href="#contact" className={styles.contactButton}>
-        Contact Me
+        {data.contactButton}
       </Link>
     </div>
   );

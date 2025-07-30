@@ -2,7 +2,16 @@
   "hero": {
     "name": "Pedro Amaral Chapelin",
     "title": "FullStack developer 🖥️",
-    "description": "I like cool things and to make boring stuff cooler."
+    "description": "I like cool things and to make boring stuff cooler.",
+    "contactButton": "Contact Me"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "strengths": "Strengths",
+    "workExperiences": "Work Experiences",
+    "projects": "Projects",
+    "contact": "Contact"
   },
   "about": {
     "title": "About",
@@ -77,6 +86,13 @@
   "projects": {
     "title": "What I've done",
     "subtitle": "Some of my Work",
+    "categories": {
+      "computerVision": "Computer Vision",
+      "gameDev": "Game Development",
+      "webDev": "Web Development",
+      "other": "Other",
+      "all": "All"
+    },
     "list": [
       {
         "title": "Bodybuilding Poses Classifier",
