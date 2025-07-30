@@ -50,7 +50,10 @@ export default function HomePage() {
           <Projects data={portfolioData.projects} />
         </section>
 
-        <section id="contact" className={styles.section}>
+        <section
+          id="contact"
+          className={`${styles.section} ${styles.sectionFooter}`}
+        >
           <Contact data={portfolioData.contact} />
         </section>
       </main>
