@@ -1,6 +1,7 @@
 'use client';
 
 import { useActiveSection } from '@/hooks/useActiveSection';
+import { useWindowSize } from '@/hooks/useWindowSize';
 import Header from '@/components/header/Header';
 import Hero from '@/components/sections/hero/Hero';
 import About from '@/components/sections/about/About';
@@ -11,7 +12,10 @@ import Contact from '@/components/sections/contact/Contact';
 import portfolioData from '../data/Portfolio.json';
 import styles from './page.module.css';
 
+const MOBILE_BREAKPOINT = 900;
+
 export default function HomePage() {
+  const { width } = useWindowSize();
   const sectionIds = [
     'hero',
     'about',
@@ -20,7 +24,10 @@ export default function HomePage() {
     'projects',
     'contact',
   ];
-  const activeSection = useActiveSection(sectionIds);
+
+  const sectionIdsToObserve = width > MOBILE_BREAKPOINT ? sectionIds : [];
+
+  const activeSection = useActiveSection(sectionIdsToObserve);
 
   return (
     <>
