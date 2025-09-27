@@ -151,6 +151,13 @@
         "category": "Desenvolvimento Web"
       },
       {
+        "title": "Amigo Secreto",
+        "description": "Aplicação para jogar amigo secreto com os amigos localmente, para até 20 pessoas",
+        "image": "secret-santa",
+        "url": "/SecretSanta",
+        "category": "Desenvolvimento Web"
+      },
+      {
         "title": "Biblioteca de processamento de grafos",
         "description": "Série de funções para extrair informações de um determinado grafo.",
         "image": "graphs-processing-library",

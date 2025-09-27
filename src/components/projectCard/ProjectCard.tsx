@@ -21,6 +21,7 @@ import gameOfLifeImg from '@/assets/projects/game-of-life.png';
 import reduxVImg from '@/assets/projects/redux-v.png';
 import fodaSeImg from '@/assets/projects/foda-se.png';
 import portfolioImg from '@/assets/projects/portfolio.png';
+import secretSantaImg from '@/assets/projects/secret-santa.png';
 
 const imageMap: { [key: string]: StaticImageData } = {
   'polygon-generator': polygonImg,
@@ -35,6 +36,7 @@ const imageMap: { [key: string]: StaticImageData } = {
   'redux-v': reduxVImg,
   'foda-se': fodaSeImg,
   portfolio: portfolioImg,
+  'secret-santa': secretSantaImg,
 };
 
 type Project = {

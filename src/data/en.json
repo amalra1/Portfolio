@@ -151,6 +151,13 @@
         "category": "Web Development"
       },
       {
+        "title": "Secret Santa",
+        "description": "Sort a friend to gift using Secret Santa, up to 20 names max.",
+        "image": "secret-santa",
+        "url": "/SecretSanta",
+        "category": "Web Development"
+      },
+      {
         "title": "Graphs processing library",
         "description": "Series of functions to extract information of a given graph",
         "image": "graphs-processing-library",
