@@ -154,7 +154,7 @@
         "title": "Secret Santa",
         "description": "Sort a friend to gift using Secret Santa, up to 20 names max.",
         "image": "secret-santa",
-        "url": "/SecretSanta",
+        "url": "https://secret-santa-a8j.pages.dev/",
         "category": "Web Development"
       },
       {
