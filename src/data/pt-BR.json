@@ -182,7 +182,7 @@
         "title": "Gerador de polígonos",
         "description": "Um gerador de polígonos feito com Javascript.",
         "image": "polygon-generator",
-        "url": "/PolygonGenerator/ProcessadorPoligono.html",
+        "url": "https://github.com/amalra1/PolygonGenerator",
         "category": "Outros"
       }
     ]
