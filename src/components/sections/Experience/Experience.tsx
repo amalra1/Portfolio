@@ -45,13 +45,9 @@ export default function Experience({ data }: ExperienceProps) {
               <div className={styles.body}>
                 <h3 className={styles.company}>
                   {logo && (
-                    <Image
-                      src={logo}
-                      alt=""
-                      width={28}
-                      height={28}
-                      className={styles.logo}
-                    />
+                    <span className={styles.logoFrame}>
+                      <Image src={logo} alt="" className={styles.logo} />
+                    </span>
                   )}
                   {item.company}
                 </h3>

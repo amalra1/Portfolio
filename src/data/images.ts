@@ -7,8 +7,9 @@ import meBike from '@/assets/images/me-bike.webp';
 import meAirsoft from '@/assets/images/me-airsoft.webp';
 import meTrail from '@/assets/images/me-trail.webp';
 
-import ciandtLogo from '@/assets/logos/ciandt-logo.webp';
-import vivoLogo from '@/assets/logos/vivo-logo.webp';
+import ciandtLogo from '@/assets/logos/ciandt-logo.svg';
+import vivoLogo from '@/assets/logos/vivo-logo.svg';
+import umonctonLogo from '@/assets/logos/umoncton-logo.svg';
 
 import blocks from '@/assets/projects/blocks.webp';
 import bodybuilding from '@/assets/projects/bodybuilding-pose-classifier.webp';
@@ -37,6 +38,7 @@ export const photos: Record<string, StaticImageData> = {
 export const logos: Record<string, StaticImageData> = {
   ciandt: ciandtLogo,
   vivo: vivoLogo,
+  umoncton: umonctonLogo,
 };
 
 export const projectImages: Record<string, StaticImageData> = {

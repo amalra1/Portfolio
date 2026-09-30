@@ -95,15 +95,40 @@
     "present": "Agora",
     "items": [
       {
+        "logo": "umoncton",
+        "company": "Université de Moncton",
+        "role": "Pesquisador",
+        "start": "2026",
+        "end": null,
+        "startLabel": "Ago 2026",
+        "endLabel": null,
+        "tech": [
+          "Python",
+          "PyTorch",
+          "PennyLane",
+          "Vision Transformers",
+          "CNNs",
+          "Quantum ML"
+        ],
+        "description": "Pesquisa pelo Mitacs Globalink no laboratório PRIME em Moncton, Canadá, no projeto Quantum Machine Learning and Deep Learning in Oncology, sob supervisão do Prof. Moulay Akhloufi. Meu foco é câncer de colo do útero: classifico imagens de Papanicolau do dataset CRIC com CNNs e Vision Transformers e depois testo classificadores quânticos baseados em kernel e pipelines híbridos DL-QML, comparando com os modelos clássicos."
+      },
+      {
         "logo": "ciandt",
         "company": "CI&T",
-        "role": "Estagiário de Desenvolvimento de Software",
+        "role": "Estagiário → Desenvolvedor Full-Stack Júnior",
         "start": "2025",
-        "end": null,
+        "end": "2026",
         "startLabel": "Mar 2025",
-        "endLabel": null,
-        "tech": ["Java", "Spring Boot", "React", "Node.js", "Docker", "AWS"],
-        "description": "Na CI&T, apliquei meu conhecimento em um papel prático de Full-Stack, desenvolvendo ativamente com Java (Spring Boot) no backend e React no frontend. Também tive contato com Node.js em uma arquitetura BFF e aprimorei minhas habilidades de controle de versão com Gitflow. Além disso, tive contato com muitas outras ferramentas úteis, como Docker, AWS, DBeaver e IA Generativa."
+        "endLabel": "Ago 2026",
+        "tech": [
+          "Java",
+          "Spring Boot",
+          "Node.js",
+          "React",
+          "SonarQube",
+          "BMAD"
+        ],
+        "description": "Entrei como Estagiário de Desenvolvimento de Software e fui efetivado como Desenvolvedor Full-Stack Júnior em janeiro de 2026. No estágio, trabalhei com Java (Spring Boot) no backend e React no frontend, usando Gitflow, Docker e AWS. Como júnior, passei para Node.js no BFF e React no frontend, ganhei muito mais familiaridade com ferramentas de qualidade de código como SonarQube, testes de mutação e testes de componente, e aprendi a trabalhar com o BMAD, um workflow baseado em agentes personalizados no Claude."
       },
       {
         "logo": "vivo",
@@ -196,7 +221,7 @@
       {
         "slug": "portfolio",
         "title": "Portfólio",
-        "description": "Este mesmo site em que você está. Brutalista, vermelho, feito com Next.js e GSAP.",
+        "description": "Este mesmo site em que você está, feito com Next.js e GSAP.",
         "image": "portfolio",
         "url": "https://github.com/amalra1/Portfolio",
         "category": "webDev",

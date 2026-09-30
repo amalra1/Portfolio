@@ -46,19 +46,38 @@
 
 .company {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-3);
+  gap: var(--space-3) var(--space-4);
   font-size: var(--step-1);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.01em;
 }
 
+.logoFrame {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: var(--space-2) var(--space-3);
+  background: var(--fg);
+  border: var(--border-thick) solid var(--fg);
+  box-shadow: 5px 5px 0 var(--red);
+  transform: rotate(-3deg);
+  transition:
+    transform var(--dur) var(--ease-out),
+    box-shadow var(--dur) var(--ease-out);
+}
+
+.item:hover .logoFrame {
+  transform: rotate(0deg) translate(-2px, -2px);
+  box-shadow: 8px 8px 0 var(--red);
+}
+
 .logo {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  filter: grayscale(1) brightness(1.6);
+  display: block;
+  width: auto;
+  height: 34px;
 }
 
 .role {

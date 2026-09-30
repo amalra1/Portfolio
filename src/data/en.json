@@ -95,15 +95,40 @@
     "present": "Now",
     "items": [
       {
+        "logo": "umoncton",
+        "company": "Université de Moncton",
+        "role": "Researcher",
+        "start": "2026",
+        "end": null,
+        "startLabel": "Aug 2026",
+        "endLabel": null,
+        "tech": [
+          "Python",
+          "PyTorch",
+          "PennyLane",
+          "Vision Transformers",
+          "CNNs",
+          "Quantum ML"
+        ],
+        "description": "Mitacs Globalink research internship at the PRIME lab in Moncton, Canada, on the project Quantum Machine Learning and Deep Learning in Oncology, supervised by Prof. Moulay Akhloufi. My focus is cervical cancer: I classify Pap smear images from the CRIC dataset with CNNs and Vision Transformers, then test quantum kernel-based classifiers and hybrid DL-QML pipelines to compare them against the classical baselines."
+      },
+      {
         "logo": "ciandt",
         "company": "CI&T",
-        "role": "Software Development Intern",
+        "role": "Intern → Junior Full-Stack Developer",
         "start": "2025",
-        "end": null,
+        "end": "2026",
         "startLabel": "Mar 2025",
-        "endLabel": null,
-        "tech": ["Java", "Spring Boot", "React", "Node.js", "Docker", "AWS"],
-        "description": "At CI&T, I applied my knowledge in a hands-on Full-Stack role, actively developing with Java (Spring Boot) on the backend and React on the frontend. I was also exposed to Node.js within a BFF architecture and honed my version control skills using Gitflow. Besides that, I got in contact with many other useful tools, such as Docker, AWS, DBeaver and Generative AI."
+        "endLabel": "Aug 2026",
+        "tech": [
+          "Java",
+          "Spring Boot",
+          "Node.js",
+          "React",
+          "SonarQube",
+          "BMAD"
+        ],
+        "description": "Joined as a Software Development Intern and was promoted to Junior Full-Stack Developer in January 2026. As an intern I worked with Java (Spring Boot) on the backend and React on the frontend, using Gitflow, Docker and AWS. As a junior I moved to Node.js on the BFF and React on the frontend, got much more comfortable with code quality tooling like SonarQube, mutation testing and component tests, and learned to work with BMAD, an agent-driven workflow built on custom Claude agents."
       },
       {
         "logo": "vivo",
@@ -196,7 +221,7 @@
       {
         "slug": "portfolio",
         "title": "Portfolio",
-        "description": "This very website you're on. Brutalist, red, and built with Next.js and GSAP.",
+        "description": "This very website you're on, built with Next.js and GSAP.",
         "image": "portfolio",
         "url": "https://github.com/amalra1/Portfolio",
         "category": "webDev",
