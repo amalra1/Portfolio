@@ -1,37 +1,27 @@
-import type { ReactNode } from 'react';
-import { TribalSpikes } from '@/components/motion/Ornament';
+import { cx } from '@/lib/classNames';
+import { getSectionNumber } from '@/lib/sections';
+import TribalSpikes from '@/components/ornaments/TribalSpikes/TribalSpikes';
+import type { SectionProps } from '@/types/components/layout';
 import styles from './Section.module.css';
-
-type Props = {
-  id: string;
-  index: string;
-  label: string;
-  titleId: string;
-  children: ReactNode;
-  className?: string;
-  /** Set false when the section renders its own full-bleed layout. */
-  padded?: boolean;
-};
 
 export default function Section({
   id,
-  index,
   label,
   titleId,
   children,
   className,
   padded = true,
-}: Props) {
+}: SectionProps) {
   return (
     <section
       id={id}
       aria-labelledby={titleId}
-      className={`${styles.section} ${className ?? ''}`}
+      className={cx(styles.section, className)}
     >
       <div className={padded ? styles.inner : undefined}>
-        <p className={`${styles.label} mono`}>
-          <span className={styles.index}>{index}</span>
-          <span className={`${styles.word} gothic`}>{label}</span>
+        <p className={cx(styles.label, 'mono')}>
+          <span className={styles.index}>{getSectionNumber(id)}</span>
+          <span className={cx(styles.word, 'gothic')}>{label}</span>
           <TribalSpikes className={styles.spikes} />
         </p>
         {children}

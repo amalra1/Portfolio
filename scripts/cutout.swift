@@ -1,5 +1,3 @@
-// Removes the background from a photo using Apple's Vision framework.
-// Usage: swift scripts/cutout.swift <input.jpg> <output.png>
 import Foundation
 import Vision
 import CoreImage

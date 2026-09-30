@@ -1,5 +1,3 @@
-/* Transparent over the red hero (black type); once the hero scrolls away it
-   gains a translucent dark backdrop and off-white type. No borders anywhere. */
 .header {
   --ink: #0f0b0b;
   --ink-dim: rgba(15, 11, 11, 0.62);
@@ -30,7 +28,6 @@
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* language toggle inherits these */
 .header :global(.mono),
 .header button {
   color: inherit;
@@ -72,7 +69,6 @@
   color: var(--ink);
 }
 
-/* active marker: a hard square that grows in from the left */
 .link::before {
   content: '';
   width: 0.55em;
@@ -116,54 +112,6 @@
   color: var(--ink);
 }
 
-/* ---------- mobile overlay ---------- */
-.overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 90;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: calc(var(--header-h) + var(--space-5)) var(--gutter) var(--space-6);
-  background: var(--red);
-  color: var(--bg);
-  visibility: hidden;
-  clip-path: inset(0 0 100% 0);
-}
-
-.overlayList {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1em;
-  font-size: clamp(3rem, 14vw, 7rem);
-}
-
-.overlayItem {
-  overflow: hidden;
-}
-
-.overlayLink {
-  display: flex;
-  align-items: baseline;
-  gap: 0.25em;
-  padding-block: 0.02em;
-}
-
-.overlayLink .num {
-  font-size: 0.22em;
-  color: var(--bg);
-  opacity: 0.6;
-  font-family: var(--font-mono);
-}
-
-.overlayFooter {
-  margin-top: var(--space-6);
-  display: flex;
-  justify-content: space-between;
-  opacity: 0.8;
-}
-
-/* while the overlay is open the header must read as black-on-red */
 .menuOpen {
   --ink: #0f0b0b;
   --ink-dim: rgba(15, 11, 11, 0.62);
@@ -178,8 +126,7 @@
     display: block;
   }
 
-  .menuButton,
-  .overlay {
+  .menuButton {
     display: none;
   }
 }

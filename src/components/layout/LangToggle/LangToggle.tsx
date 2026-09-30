@@ -1,28 +1,31 @@
 'use client';
 
-import { useLanguage } from '@/contexts/LanguageContext';
+import { PORTUGUESE_LANGUAGE } from '@/constants/language';
+import { cx } from '@/lib/classNames';
+import { useLanguage } from '@/hooks/useLanguage';
+import type { LangToggleProps } from '@/types/components/layout';
 import styles from './LangToggle.module.css';
 
-export default function LangToggle({ label }: { label: string }) {
+export default function LangToggle({ label }: LangToggleProps) {
   const { language, toggleLanguage } = useLanguage();
-  const isPt = language === 'pt-BR';
+  const isPortuguese = language === PORTUGUESE_LANGUAGE;
 
   return (
     <button
       type="button"
-      className={`${styles.toggle} mono`}
+      className={cx(styles.toggle, 'mono')}
       onClick={toggleLanguage}
       aria-label={label}
-      aria-pressed={isPt}
+      aria-pressed={isPortuguese}
       title={label}
     >
-      <span className={`${styles.option} ${!isPt ? styles.active : ''}`}>
+      <span className={cx(styles.option, !isPortuguese && styles.active)}>
         EN
       </span>
       <span className={styles.slash} aria-hidden="true">
         /
       </span>
-      <span className={`${styles.option} ${isPt ? styles.active : ''}`}>
+      <span className={cx(styles.option, isPortuguese && styles.active)}>
         PT
       </span>
     </button>

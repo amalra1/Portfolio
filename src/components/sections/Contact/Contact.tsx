@@ -3,94 +3,42 @@
 import { useRef } from 'react';
 import Image from 'next/image';
 import { useLenis } from 'lenis/react';
-import { gsap, useGSAP } from '@/lib/gsap';
-import { MEDIA } from '@/lib/media';
-import { scrollToTarget } from '@/lib/scroll';
+import { HERO_SECTION_ID } from '@/constants/sections';
 import { photos } from '@/data/images';
-import type { ContactData, FooterData, HeroData } from '@/data/types';
-import { TribalSun } from '@/components/motion/Ornament';
+import { cx } from '@/lib/classNames';
+import { scrollToTarget } from '@/lib/scroll';
+import { getSectionNumber } from '@/lib/sections';
+import TribalSun from '@/components/ornaments/TribalSun/TribalSun';
+import ExternalLink from '@/components/ui/ExternalLink/ExternalLink';
+import type { ContactProps } from '@/types/components/sections';
+import { useContactAnimation } from './useContactAnimation';
 import styles from './Contact.module.css';
 
-type Props = {
-  data: ContactData;
-  footer: FooterData;
-  name: Pick<HeroData, 'firstName' | 'lastName'>;
-};
+const GOTHIC_TITLE_LINE = 1;
 
-export default function Contact({ data, footer, name }: Props) {
+export default function Contact({ data, footer, name }: ContactProps) {
   const ref = useRef<HTMLElement>(null);
   const lenis = useLenis();
   const photo = photos[data.photo.key];
-
-  useGSAP(
-    () => {
-      const root = ref.current;
-      if (!root) return;
-      const mm = gsap.matchMedia();
-      mm.add(MEDIA, (ctx) => {
-        const { reduce } = ctx.conditions ?? {};
-        if (reduce) return;
-
-        const title = root.querySelector(`.${styles.title}`);
-        gsap.fromTo(
-          title,
-          { scale: 0.86, yPercent: 12 },
-          {
-            scale: 1,
-            yPercent: 0,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: title,
-              start: 'top bottom',
-              end: 'top 35%',
-              scrub: true,
-            },
-          },
-        );
-
-        gsap.from(root.querySelectorAll(`.${styles.grid} > * > *`), {
-          y: 24,
-          autoAlpha: 0,
-          stagger: 0.08,
-          duration: 0.7,
-          scrollTrigger: {
-            trigger: root.querySelector(`.${styles.grid}`),
-            start: 'top 85%',
-            once: true,
-          },
-        });
-
-        gsap.fromTo(
-          root.querySelector(`.${styles.giant}`),
-          { yPercent: 40 },
-          {
-            yPercent: 0,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: root.querySelector(`.${styles.band}`),
-              start: 'top bottom',
-              end: 'bottom bottom',
-              scrub: true,
-            },
-          },
-        );
-      });
-    },
-    { scope: ref },
-  );
+  useContactAnimation(ref);
 
   return (
     <footer id="contact" ref={ref} className={styles.footer}>
       <div className={styles.top}>
-        <p className={`${styles.label} mono`}>
-          <span className={styles.index}>05</span>
-          <span className={`${styles.word} gothic`}>{data.label}</span>
+        <p className={cx(styles.label, 'mono')}>
+          <span className={styles.index}>{getSectionNumber('contact')}</span>
+          <span className={cx(styles.word, 'gothic')}>{data.label}</span>
         </p>
 
         <TribalSun className={styles.sun} />
-        <h2 id="contact-title" className={`${styles.title} display`}>
+        <h2 id="contact-title" className={cx(styles.title, 'display')}>
           {data.title.map((line, i) => (
-            <span key={line} className={i === 1 ? styles.gothicLine : undefined}>
+            <span
+              key={line}
+              className={
+                i === GOTHIC_TITLE_LINE ? styles.gothicLine : undefined
+              }
+            >
               {line}
             </span>
           ))}
@@ -106,7 +54,7 @@ export default function Contact({ data, footer, name }: Props) {
                   alt={data.photo.caption}
                   sizes="(min-width: 900px) 360px, 100vw"
                 />
-                <figcaption className={`${styles.caption} mono`}>
+                <figcaption className={cx(styles.caption, 'mono')}>
                   {data.photo.caption}
                 </figcaption>
               </figure>
@@ -116,18 +64,13 @@ export default function Contact({ data, footer, name }: Props) {
             <a href={`mailto:${data.email}`} className={styles.email}>
               {data.email}
             </a>
-            <ul className={`${styles.socials} mono`}>
+            <ul className={cx(styles.socials, 'mono')}>
               {data.socials.map((social) => (
                 <li key={social.name}>
-                  <a
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.social}
-                  >
+                  <ExternalLink href={social.url} className={styles.social}>
                     {social.name}
                     <span aria-hidden="true">↗</span>
-                  </a>
+                  </ExternalLink>
                 </li>
               ))}
             </ul>
@@ -135,17 +78,17 @@ export default function Contact({ data, footer, name }: Props) {
         </div>
       </div>
 
-      <div className={`${styles.meta} mono`}>
+      <div className={cx(styles.meta, 'mono')}>
         <span>
           © {new Date().getFullYear()} {name.firstName} {name.lastName} —{' '}
           {footer.rights}
         </span>
         <span>{footer.builtWith}</span>
         <a
-          href="#hero"
+          href={`#${HERO_SECTION_ID}`}
           className={styles['top-link']}
-          onClick={(e) => {
-            e.preventDefault();
+          onClick={(event) => {
+            event.preventDefault();
             scrollToTarget(0, lenis);
           }}
         >
@@ -153,8 +96,8 @@ export default function Contact({ data, footer, name }: Props) {
         </a>
       </div>
 
-      <div className={`${styles.band} band-red`} aria-hidden="true">
-        <span className={`${styles.giant} display`}>
+      <div className={cx(styles.band, 'band-red')} aria-hidden="true">
+        <span className={cx(styles.giant, 'display')}>
           {name.firstName} {name.lastName}
         </span>
       </div>

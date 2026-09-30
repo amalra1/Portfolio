@@ -2,28 +2,33 @@
 
 import Image from 'next/image';
 import { useLenis } from 'lenis/react';
-import { scrollToTarget } from '@/lib/scroll';
 import { photos } from '@/data/images';
-import type { AboutData } from '@/data/types';
+import { cx } from '@/lib/classNames';
+import { scrollToTarget } from '@/lib/scroll';
 import Section from '@/components/layout/Section/Section';
 import SectionTitle from '@/components/layout/SectionTitle/SectionTitle';
-import ScrubWords from '@/components/motion/ScrubWords';
-import Parallax from '@/components/motion/Parallax';
-import { TribalThorn } from '@/components/motion/Ornament';
+import Parallax from '@/components/motion/Parallax/Parallax';
+import ScrubWords from '@/components/motion/ScrubWords/ScrubWords';
+import TribalThorn from '@/components/ornaments/TribalThorn/TribalThorn';
+import type { AboutProps } from '@/types/components/sections';
 import styles from './About.module.css';
 
-export default function About({ data }: { data: AboutData }) {
+const PARAGRAPH_KEY_LENGTH = 24;
+const LEAD_PHOTO_PARALLAX = 4;
+const TRAILING_PHOTO_PARALLAX = 9;
+
+export default function About({ data }: AboutProps) {
   const lenis = useLenis();
 
   return (
-    <Section id="about" index="01" label={data.label} titleId="about-title">
+    <Section id="about" label={data.label} titleId="about-title">
       <SectionTitle id="about-title">{data.title}</SectionTitle>
 
       <div className={styles.grid}>
         <div className={styles.text}>
           {data.paragraphs.map((paragraph) => (
             <ScrubWords
-              key={paragraph.slice(0, 24)}
+              key={paragraph.slice(0, PARAGRAPH_KEY_LENGTH)}
               className={styles.paragraph}
               start="top 85%"
               end="bottom 55%"
@@ -33,9 +38,9 @@ export default function About({ data }: { data: AboutData }) {
           ))}
           <a
             href="#contact"
-            className={`${styles.cta} display`}
-            onClick={(e) => {
-              e.preventDefault();
+            className={cx(styles.cta, 'display')}
+            onClick={(event) => {
+              event.preventDefault();
               scrollToTarget('#contact', lenis);
             }}
           >
@@ -52,7 +57,11 @@ export default function About({ data }: { data: AboutData }) {
             if (!src) return null;
             return (
               <li key={photo.key} className={styles.photo}>
-                <Parallax amount={i === 0 ? 4 : 9}>
+                <Parallax
+                  amount={
+                    i === 0 ? LEAD_PHOTO_PARALLAX : TRAILING_PHOTO_PARALLAX
+                  }
+                >
                   <Image
                     src={src}
                     alt={photo.caption}
@@ -60,7 +69,7 @@ export default function About({ data }: { data: AboutData }) {
                   />
                 </Parallax>
                 <TribalThorn className={styles.mark} />
-                <span className={`${styles.caption} mono`}>
+                <span className={cx(styles.caption, 'mono')}>
                   {photo.caption}
                 </span>
               </li>

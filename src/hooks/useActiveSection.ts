@@ -2,10 +2,6 @@
 
 import { useState, useEffect } from 'react';
 
-/**
- * Tracks which section id is currently most visible.
- * Pass a module-level constant array so the observer is not re-created.
- */
 export function useActiveSection(sectionIds: readonly string[]) {
   const [activeSection, setActiveSection] = useState<string>(
     sectionIds[0] ?? '',

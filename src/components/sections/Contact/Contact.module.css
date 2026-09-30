@@ -50,7 +50,6 @@
   display: block;
 }
 
-/* second word in blackletter, red, nudged right */
 .title .gothicLine {
   font-family: var(--font-gothic), serif;
   font-weight: 400;

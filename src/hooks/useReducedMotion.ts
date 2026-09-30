@@ -1,7 +1,7 @@
 'use client';
 
 import { useSyncExternalStore } from 'react';
-import { REDUCED } from '@/lib/media';
+import { REDUCED } from '@/constants/media';
 
 function subscribe(callback: () => void) {
   const mq = window.matchMedia(REDUCED);
@@ -17,7 +17,6 @@ function getServerSnapshot() {
   return false;
 }
 
-/** SSR-safe hook for prefers-reduced-motion. Always false on the server. */
 export function useReducedMotion(): boolean {
   return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 }

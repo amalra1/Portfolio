@@ -1,109 +1,61 @@
 'use client';
 
 import { useMemo, useRef, useState } from 'react';
-import { gsap, ScrollTrigger, useGSAP } from '@/lib/gsap';
-import { MEDIA } from '@/lib/media';
-import type { ProjectCategory, ProjectsData } from '@/data/types';
+import {
+  ALL_PROJECTS_CATEGORY,
+  DEFAULT_PROJECT_CATEGORY,
+  PROJECT_CATEGORY_ORDER,
+} from '@/constants/projects';
+import { cx } from '@/lib/classNames';
+import { padIndex } from '@/lib/format';
 import Section from '@/components/layout/Section/Section';
 import SectionTitle from '@/components/layout/SectionTitle/SectionTitle';
+import type { ProjectsProps } from '@/types/components/sections';
+import type { ProjectCategory } from '@/types/portfolio';
 import ProjectItem from './ProjectItem';
+import { useProjectsAnimation } from './useProjectsAnimation';
 import styles from './Projects.module.css';
 
-const CATEGORY_ORDER: ProjectCategory[] = [
-  'webDev',
-  'computerVision',
-  'gameDev',
-  'other',
-  'all',
-];
-
-export default function Projects({ data }: { data: ProjectsData }) {
-  const [category, setCategory] = useState<ProjectCategory>('webDev');
+export default function Projects({ data }: ProjectsProps) {
+  const [category, setCategory] = useState<ProjectCategory>(
+    DEFAULT_PROJECT_CATEGORY,
+  );
   const listRef = useRef<HTMLUListElement>(null);
+  useProjectsAnimation(listRef, category);
 
   const counts = useMemo(() => {
-    const map = new Map<ProjectCategory, number>();
-    map.set('all', data.list.length);
-    data.list.forEach((p) => {
-      const key = p.category as ProjectCategory;
-      map.set(key, (map.get(key) ?? 0) + 1);
+    const countByCategory = new Map<ProjectCategory, number>();
+    countByCategory.set(ALL_PROJECTS_CATEGORY, data.list.length);
+    data.list.forEach((project) => {
+      const key = project.category as ProjectCategory;
+      countByCategory.set(key, (countByCategory.get(key) ?? 0) + 1);
     });
-    return map;
+    return countByCategory;
   }, [data.list]);
 
   const visible = useMemo(
     () =>
-      category === 'all'
+      category === ALL_PROJECTS_CATEGORY
         ? data.list
-        : data.list.filter((p) => p.category === category),
+        : data.list.filter((project) => project.category === category),
     [data.list, category],
   );
 
-  // Items animate in on first view and again whenever the filter changes.
-  useGSAP(
-    () => {
-      const list = listRef.current;
-      if (!list) return;
-      const mm = gsap.matchMedia();
-      mm.add(MEDIA, (ctx) => {
-        const { reduce, desktop } = ctx.conditions ?? {};
-        if (reduce) return;
-        const items = list.querySelectorAll<HTMLElement>(`.${styles.item}`);
-        items.forEach((item, i) => {
-          const figure = item.querySelector(`.${styles.figure}`);
-          const body = item.querySelector(`.${styles.body}`);
-          const fromX = desktop ? (i % 2 === 0 ? -60 : 60) : 0;
-          gsap.set(figure, { x: fromX, y: desktop ? 0 : 40, autoAlpha: 0 });
-          gsap.set(body, { y: 30, autoAlpha: 0 });
-        });
-        ScrollTrigger.batch(items, {
-          start: 'top 85%',
-          once: true,
-          onEnter: (batch) => {
-            batch.forEach((item) => {
-              const el = item as HTMLElement;
-              gsap
-                .timeline()
-                .to(el.querySelector(`.${styles.figure}`), {
-                  x: 0,
-                  y: 0,
-                  autoAlpha: 1,
-                  duration: 0.9,
-                  ease: 'power4.out',
-                  overwrite: true,
-                })
-                .to(
-                  el.querySelector(`.${styles.body}`),
-                  {
-                    y: 0,
-                    autoAlpha: 1,
-                    duration: 0.7,
-                    overwrite: true,
-                  },
-                  '-=0.6',
-                );
-            });
-          },
-        });
-        requestAnimationFrame(() => ScrollTrigger.refresh());
-      });
-    },
-    { scope: listRef, dependencies: [category], revertOnUpdate: true },
-  );
-
   return (
-    <Section id="projects" index="04" label={data.label} titleId="projects-title">
+    <Section id="projects" label={data.label} titleId="projects-title">
       <SectionTitle id="projects-title">{data.title}</SectionTitle>
 
       <div className={styles.toolbar}>
         <div className={styles.filter} role="group" aria-label={data.label}>
-          {CATEGORY_ORDER.map((key) => (
+          {PROJECT_CATEGORY_ORDER.map((key) => (
             <button
               key={key}
               type="button"
-              className={`${styles.chip} mono ${
-                category === key ? styles.chipActive : ''
-              }`}
+              className={cx(
+                styles.chip,
+                'mono',
+                category === key && styles.chipActive,
+              )}
               aria-pressed={category === key}
               onClick={() => setCategory(key)}
             >
@@ -112,9 +64,9 @@ export default function Projects({ data }: { data: ProjectsData }) {
             </button>
           ))}
         </div>
-        <span className={`${styles.count} display`} aria-live="polite">
-          {String(visible.length).padStart(2, '0')}
-          <small className="mono">/ {String(data.list.length).padStart(2, '0')}</small>
+        <span className={cx(styles.count, 'display')} aria-live="polite">
+          {padIndex(visible.length)}
+          <small className="mono">/ {padIndex(data.list.length)}</small>
         </span>
       </div>
 

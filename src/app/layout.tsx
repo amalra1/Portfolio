@@ -1,8 +1,13 @@
 import type { Metadata, Viewport } from 'next';
+import Providers from '@/components/providers/Providers/Providers';
+import type { RootLayoutProps } from '@/types/components/app';
 import { fontClassNames } from './fonts';
-import Providers from '@/components/providers/Providers';
 import 'lenis/dist/lenis.css';
-import './globals.css';
+import '@/styles/tokens.css';
+import '@/styles/reset.css';
+import '@/styles/focus.css';
+import '@/styles/utilities.css';
+import '@/styles/motion.css';
 
 export const metadata: Metadata = {
   title: 'Pedro Chapelin — Full-Stack Developer',
@@ -16,11 +21,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="en" className={fontClassNames}>
       <body>

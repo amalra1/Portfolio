@@ -9,7 +9,6 @@
   align-content: start;
 }
 
-/* Short, condensed, uppercase statements instead of long prose. */
 .paragraph {
   font-family: var(--font-sans);
   font-stretch: 78%;
@@ -50,7 +49,6 @@
   transform: translate(0.15em, -0.15em);
 }
 
-/* ---------- two tall photos, offset and overlapping ---------- */
 .photos {
   position: relative;
   display: grid;
@@ -90,8 +88,6 @@
   filter: none;
 }
 
-/* first photo is overlapped at the bottom by the second, so its caption
-   sits on top */
 .photo:nth-child(1) .caption {
   top: 0;
   bottom: auto;

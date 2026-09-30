@@ -4,7 +4,6 @@
   gap: var(--space-4);
 }
 
-/* Hard-edged blocks with thick borders and a solid offset shadow. */
 .cell {
   position: relative;
   display: grid;
@@ -104,7 +103,6 @@
     gap: var(--space-5);
   }
 
-  /* stagger the middle column down for a broken-grid rhythm */
   .cell:nth-child(3n + 2) {
     margin-top: var(--space-6);
   }

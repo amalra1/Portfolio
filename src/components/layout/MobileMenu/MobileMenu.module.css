@@ -1,0 +1,51 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: calc(var(--header-h) + var(--space-5)) var(--gutter) var(--space-6);
+  background: var(--red);
+  color: var(--bg);
+  visibility: hidden;
+  clip-path: inset(0 0 100% 0);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  font-size: clamp(3rem, 14vw, 7rem);
+}
+
+.item {
+  overflow: hidden;
+}
+
+.link {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25em;
+  padding-block: 0.02em;
+}
+
+.num {
+  font-size: 0.22em;
+  color: var(--bg);
+  opacity: 0.6;
+  font-family: var(--font-mono);
+}
+
+.footer {
+  margin-top: var(--space-6);
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
+}
+
+@media (min-width: 900px) {
+  .overlay {
+    display: none;
+  }
+}

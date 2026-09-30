@@ -52,10 +52,7 @@
   "strengths": {
     "label": "Skills",
     "title": "What I know",
-    "marquee": [
-      "Skills",
-      "Technical strengths"
-    ],
+    "marquee": ["Skills", "Technical strengths"],
     "skills": [
       {
         "title": "Web Development",
@@ -108,14 +105,7 @@
         "end": null,
         "startLabel": "Mar 2025",
         "endLabel": null,
-        "tech": [
-          "Java",
-          "Spring Boot",
-          "React",
-          "Node.js",
-          "Docker",
-          "AWS"
-        ],
+        "tech": ["Java", "Spring Boot", "React", "Node.js", "Docker", "AWS"],
         "description": "At CI&T, I applied my knowledge in a hands-on Full-Stack role, actively developing with Java (Spring Boot) on the backend and React on the frontend. I was also exposed to Node.js within a BFF architecture and honed my version control skills using Gitflow. Besides that, I got in contact with many other useful tools, such as Docker, AWS, DBeaver and Generative AI."
       },
       {
@@ -126,12 +116,7 @@
         "end": "2025",
         "startLabel": "Aug 2023",
         "endLabel": "Feb 2025",
-        "tech": [
-          "Scrum",
-          "Kanban",
-          "Jira",
-          "SAP"
-        ],
+        "tech": ["Scrum", "Kanban", "Jira", "SAP"],
         "description": "During my internship, I built a solid foundation in software architecture and development processes, utilizing agile methodologies (Scrum/Kanban) and tools like Jira and SAP for documentation and change management."
       }
     ]
@@ -155,10 +140,7 @@
         "image": "bodybuilding-pose-classifier",
         "url": "https://github.com/amalra1/BodybuildingPoseClassifier",
         "category": "computerVision",
-        "tech": [
-          "Python",
-          "MediaPipe"
-        ]
+        "tech": ["Python", "MediaPipe"]
       },
       {
         "slug": "image-texture-segmentation",
@@ -167,10 +149,7 @@
         "image": "image-texture-segmentation",
         "url": "https://github.com/amalra1/ImageTextureSegmentation",
         "category": "computerVision",
-        "tech": [
-          "Python",
-          "OpenCV"
-        ]
+        "tech": ["Python", "OpenCV"]
       },
       {
         "slug": "perspective-transformation",
@@ -179,10 +158,7 @@
         "image": "perspective-transformation",
         "url": "https://github.com/amalra1/PerspectiveTransformation",
         "category": "computerVision",
-        "tech": [
-          "Python",
-          "OpenCV"
-        ]
+        "tech": ["Python", "OpenCV"]
       },
       {
         "slug": "zanagotchi",
@@ -191,10 +167,7 @@
         "image": "zanagotchi",
         "url": "https://github.com/amalra1/TamagotchiFPGA",
         "category": "gameDev",
-        "tech": [
-          "Verilog",
-          "FPGA"
-        ]
+        "tech": ["Verilog", "FPGA"]
       },
       {
         "slug": "blocks",
@@ -203,10 +176,7 @@
         "image": "blocks",
         "url": "https://github.com/amalra1/Blocks",
         "category": "gameDev",
-        "tech": [
-          "C",
-          "Allegro"
-        ]
+        "tech": ["C", "Allegro"]
       },
       {
         "slug": "fake-news-game",
@@ -215,9 +185,7 @@
         "image": "fake-news-game",
         "url": "https://github.com/amalra1/Fake-News-Game",
         "category": "gameDev",
-        "tech": [
-          "Game Design"
-        ]
+        "tech": ["Game Design"]
       },
       {
         "slug": "foda-se",
@@ -226,10 +194,7 @@
         "image": "foda-se",
         "url": "https://github.com/amalra1/F.da-seGame",
         "category": "gameDev",
-        "tech": [
-          "C",
-          "Sockets"
-        ]
+        "tech": ["C", "Sockets"]
       },
       {
         "slug": "portfolio",
@@ -238,11 +203,7 @@
         "image": "portfolio",
         "url": "https://github.com/amalra1/Portfolio",
         "category": "webDev",
-        "tech": [
-          "Next.js",
-          "TypeScript",
-          "GSAP"
-        ]
+        "tech": ["Next.js", "TypeScript", "GSAP"]
       },
       {
         "slug": "secret-santa",
@@ -251,9 +212,7 @@
         "image": "secret-santa",
         "url": "https://secret-santa.chapelin.com.br/",
         "category": "webDev",
-        "tech": [
-          "Web App"
-        ]
+        "tech": ["Web App"]
       },
       {
         "slug": "graphs-processing-library",
@@ -262,9 +221,7 @@
         "image": "graphs-processing-library",
         "url": "https://github.com/amalra1/Graphs-Processing-Library",
         "category": "other",
-        "tech": [
-          "Algorithms"
-        ]
+        "tech": ["Algorithms"]
       },
       {
         "slug": "game-of-life",
@@ -273,10 +230,7 @@
         "image": "game-of-life",
         "url": "https://github.com/amalra1/GameOfLife",
         "category": "other",
-        "tech": [
-          "Cellular Automata",
-          "AI"
-        ]
+        "tech": ["Cellular Automata", "AI"]
       },
       {
         "slug": "redux-v",
@@ -285,9 +239,7 @@
         "image": "redux-v",
         "url": "https://github.com/amalra1/Redux-V",
         "category": "other",
-        "tech": [
-          "Verilog"
-        ]
+        "tech": ["Verilog"]
       },
       {
         "slug": "polygon-generator",
@@ -296,18 +248,13 @@
         "image": "polygon-generator",
         "url": "https://github.com/amalra1/PolygonGenerator",
         "category": "other",
-        "tech": [
-          "JavaScript"
-        ]
+        "tech": ["JavaScript"]
       }
     ]
   },
   "contact": {
     "label": "Contact",
-    "title": [
-      "Let's",
-      "talk"
-    ],
+    "title": ["Let's", "talk"],
     "subtitle": "Let's work together to achieve our goals and learn a lot in the process.",
     "email": "chapelinpedro@gmail.com",
     "socials": [

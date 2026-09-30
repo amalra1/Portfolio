@@ -1,6 +1,5 @@
 import type Lenis from 'lenis';
 
-/** Scrolls to a target using Lenis when available, native otherwise. */
 export function scrollToTarget(
   target: string | HTMLElement | number,
   lenis?: Lenis,

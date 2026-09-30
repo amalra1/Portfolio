@@ -1,5 +1,3 @@
-// Upscales the Vision cutout (the subject is small in the source photo).
-// Usage: node scripts/upscale-cutout.mjs [factor=3]
 import { rename, stat } from 'node:fs/promises';
 import sharp from 'sharp';
 

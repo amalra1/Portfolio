@@ -1,4 +1,3 @@
-/* ---------- filter ---------- */
 .toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -57,7 +56,6 @@
   color: var(--fg-dim);
 }
 
-/* ---------- list ---------- */
 .list {
   display: grid;
   gap: var(--space-6);
@@ -200,7 +198,6 @@
     column-gap: var(--space-5);
   }
 
-  /* odd: image left, text right — even: text left, image right */
   .item:nth-child(odd) .figure {
     grid-column: 1 / 8;
   }
@@ -228,7 +225,6 @@
     right: calc(var(--space-3) * -1);
   }
 
-  /* every third item pushes down for a looser rhythm */
   .item:nth-child(3n) .body {
     margin-top: var(--space-6);
   }

@@ -1,5 +1,3 @@
-// Resizes and converts portfolio assets to WebP with sharp.
-// Usage: node scripts/optimize-images.mjs
 import { readdir, stat, unlink } from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
