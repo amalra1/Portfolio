@@ -10,12 +10,6 @@ import meTrail from '@/assets/images/me-trail.webp';
 import ciandtLogo from '@/assets/logos/ciandt-logo.webp';
 import vivoLogo from '@/assets/logos/vivo-logo.webp';
 
-import badgeCloudPractitioner from '@/assets/badges/aws-cloud-quest-cloud-practitioner.webp';
-import badgeGenAiPractitioner from '@/assets/badges/aws-cloud-quest-generative-ai-practitioner.webp';
-import badgeCloudEssentials from '@/assets/badges/aws-knowledge-cloud-essentials.webp';
-import badgeGenAiEssentials from '@/assets/badges/aws-partner-generative-ai-essentials.webp';
-import badgeGenAiArchitect from '@/assets/badges/aws-cloud-quest-generative-ai-architect.webp';
-
 import blocks from '@/assets/projects/blocks.webp';
 import bodybuilding from '@/assets/projects/bodybuilding-pose-classifier.webp';
 import fakeNews from '@/assets/projects/fake-news-game.webp';
@@ -43,14 +37,6 @@ export const photos: Record<string, StaticImageData> = {
 export const logos: Record<string, StaticImageData> = {
   ciandt: ciandtLogo,
   vivo: vivoLogo,
-};
-
-export const badges: Record<string, StaticImageData> = {
-  'aws-cloud-quest-cloud-practitioner': badgeCloudPractitioner,
-  'aws-cloud-quest-generative-ai-practitioner': badgeGenAiPractitioner,
-  'aws-knowledge-cloud-essentials': badgeCloudEssentials,
-  'aws-partner-generative-ai-essentials': badgeGenAiEssentials,
-  'aws-cloud-quest-generative-ai-architect': badgeGenAiArchitect,
 };
 
 export const projectImages: Record<string, StaticImageData> = {

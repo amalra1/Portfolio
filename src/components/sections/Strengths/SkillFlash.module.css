@@ -3,8 +3,7 @@
   grid-template-columns: 1fr auto;
   grid-template-areas:
     'title stamp'
-    'description description'
-    'badges badges';
+    'description description';
   align-items: start;
   gap: var(--space-2) var(--space-3);
   padding: var(--space-4);
@@ -41,38 +40,11 @@
   transition: color var(--dur-fast);
 }
 
-.badges {
-  grid-area: badges;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-top: var(--space-2);
-}
-
-.badge {
-  display: block;
-  width: 48px;
-  height: 48px;
-  border: 2px solid var(--bg);
-  background: var(--fg);
-  transition: transform var(--dur) var(--ease-out);
-}
-
-.badge:hover {
-  transform: translateY(-4px);
-}
-
-.badge img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
 @media (min-width: 600px) {
   .cell {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto auto auto;
-    grid-template-areas: 'stamp' 'title' 'description' 'badges';
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas: 'stamp' 'title' 'description';
     min-height: 460px;
   }
 
@@ -85,6 +57,30 @@
   .glyph {
     width: clamp(104px, 11vw, 150px);
     height: clamp(104px, 11vw, 150px);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899.98px) {
+  .cell:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'stamp title' 'stamp description';
+    align-content: center;
+    column-gap: var(--space-5);
+    min-height: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .cell:last-child:nth-child(3n + 1) {
+    grid-column: 1 / -1;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'stamp title' 'stamp description';
+    align-content: center;
+    column-gap: var(--space-5);
+    min-height: 0;
   }
 }
 

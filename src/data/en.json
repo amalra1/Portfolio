@@ -15,7 +15,7 @@
       "TypeScript",
       "Computer Vision",
       "Game Dev",
-      "AWS",
+      "GCP",
       "Gen AI"
     ]
   },
@@ -34,7 +34,7 @@
     "label": "About",
     "title": "About",
     "paragraphs": [
-      "Full-Stack developer. Java and Spring on the back end, React and TypeScript on the front. I also wander into Computer Vision and Game Dev.",
+      "Full-Stack developer. My main stack is Java and Spring on the backend, React on the front. I also wander into Computer Vision and Game Development.",
       "I get the most out of everything I build and help people along the way. Clear communication, real commitment, quick to learn whatever the project needs."
     ],
     "cta": "Hit me up",
@@ -56,15 +56,15 @@
     "skills": [
       {
         "title": "Web Development",
-        "description": "Experience in Full-Stack development using technologies such as Java for backend, Typescript and React for frontend and many other useful tools."
+        "description": "Java and Spring Boot on the backend, React, Next.js and TypeScript on the front, and Docker, Git and Gitflow along the way."
       },
       {
         "title": "Computer Vision",
-        "description": "Knowledge in image processing and pattern recognition with OpenCV and Python."
+        "description": "Python with OpenCV and MediaPipe for image processing and pattern recognition."
       },
       {
-        "title": "Agile Methodologies",
-        "description": "Experience with Scrum and Kanban for efficient project management. Use of efficient tools like Jira and Confluence."
+        "title": "Agile Workflow",
+        "description": "Scrum and Kanban day to day: sprints, dailies, plannings and retros, time tracking, Jira and Confluence."
       },
       {
         "title": "Game Development",
@@ -72,18 +72,15 @@
       },
       {
         "title": "Cloud Computing",
-        "description": "Familiarity with AWS services for scalable applications.",
-        "badges": [
-          "aws-cloud-quest-cloud-practitioner",
-          "aws-cloud-quest-generative-ai-practitioner",
-          "aws-knowledge-cloud-essentials",
-          "aws-partner-generative-ai-essentials",
-          "aws-cloud-quest-generative-ai-architect"
-        ]
+        "description": "Deployment and management of applications on GCP and frontends on Cloudflare, with cloud databases on Supabase."
       },
       {
         "title": "Generative AI",
-        "description": "Experience with complex concepts of Gen AI, such as RAG, Fine-Tuning, and the different uses of APIs."
+        "description": "Building agent workflows and MCP integrations, along with RAG, tool calling, prompt engineering, fine-tuning and LLM APIs."
+      },
+      {
+        "title": "Databases",
+        "description": "SQL queries and PostgreSQL database optimization, using tools such as DBeaver and Supabase."
       }
     ]
   },

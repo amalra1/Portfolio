@@ -15,7 +15,7 @@
       "TypeScript",
       "Visão Computacional",
       "Game Dev",
-      "AWS",
+      "GCP",
       "IA Generativa"
     ]
   },
@@ -34,7 +34,7 @@
     "label": "Sobre",
     "title": "Sobre",
     "paragraphs": [
-      "Desenvolvedor Full-Stack. Java e Spring no back end, React e TypeScript no front. Também me aventuro em Visão Computacional e Game Dev.",
+      "Desenvolvedor Full-Stack. Meus principais são Java e Spring no backend, React no front. Também me aventuro em Visão Computacional e Desenvolvimento de jogos.",
       "Extraio o máximo de tudo que construo e ajudo as pessoas no caminho. Comunicação clara, comprometimento de verdade e aprendizado rápido do que o projeto precisar."
     ],
     "cta": "Me chama",
@@ -56,15 +56,15 @@
     "skills": [
       {
         "title": "Desenvolvimento Web",
-        "description": "Experiência em desenvolvimento Full-Stack utilizando tecnologias como Java para o backend, Typescript e React para o frontend e muitas outras ferramentas úteis."
+        "description": "Java e Spring Boot no backend, React, Next.js e TypeScript no front, e Docker, Git e Gitflow no meio do caminho."
       },
       {
         "title": "Visão Computacional",
-        "description": "Conhecimento em processamento de imagens e reconhecimento de padrões com OpenCV e Python."
+        "description": "Python com OpenCV e MediaPipe para processamento de imagens e reconhecimento de padrões."
       },
       {
-        "title": "Metodologias Ágeis",
-        "description": "Experiência com Scrum e Kanban para um gerenciamento de projetos eficiente. Uso de ferramentas como Jira e Confluence."
+        "title": "Rotina Ágil",
+        "description": "Scrum e Kanban no dia a dia: sprints, dailies, plannings e retrospectivas, apontamento de horas, Jira e Confluence."
       },
       {
         "title": "Desenvolvimento de Jogos",
@@ -72,18 +72,15 @@
       },
       {
         "title": "Computação em Nuvem",
-        "description": "Familiaridade com serviços da AWS para aplicações escaláveis.",
-        "badges": [
-          "aws-cloud-quest-cloud-practitioner",
-          "aws-cloud-quest-generative-ai-practitioner",
-          "aws-knowledge-cloud-essentials",
-          "aws-partner-generative-ai-essentials",
-          "aws-cloud-quest-generative-ai-architect"
-        ]
+        "description": "Deploy e gerenciamento de aplicações no GCP e de frontends na Cloudflare, com bancos de dados em nuvem no Supabase."
       },
       {
         "title": "IA Generativa",
-        "description": "Experiência com conceitos complexos de IA Generativa, como RAG, Fine-Tuning e os diferentes usos de APIs."
+        "description": "Desenvolvimento de fluxos de agentes e integrações via MCP, além de RAG, tool calling, engenharia de prompt, fine-tuning e uso de APIs de LLMs."
+      },
+      {
+        "title": "Bancos de Dados",
+        "description": "Consultas SQL e otimização de bancos de dados PostgreSQL, com ferramentas como DBeaver e Supabase."
       }
     ]
   },

@@ -57,6 +57,7 @@ export const SKILL_GLYPHS = [
   'jaw',
   'koru',
   'spark',
+  'sigil',
 ] as const satisfies readonly GlyphName[];
 
 export const PROJECT_GLYPHS = [
