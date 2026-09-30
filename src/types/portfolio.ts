@@ -5,6 +5,7 @@ export type HeroData = PortfolioData['hero'];
 export type NavigationData = PortfolioData['navigation'];
 export type AboutData = PortfolioData['about'];
 export type StrengthsData = PortfolioData['strengths'];
+export type Skill = StrengthsData['skills'][number];
 export type InterludeData = PortfolioData['interlude'];
 export type ExperienceData = PortfolioData['experience'];
 export type ProjectsData = PortfolioData['projects'];

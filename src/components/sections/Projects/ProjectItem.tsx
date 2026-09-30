@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import { projectImages } from '@/data/images';
+import { PROJECT_GLYPHS } from '@/constants/glyphs';
 import { cx } from '@/lib/classNames';
+import { glyphAt } from '@/lib/glyphs';
 import { padIndex } from '@/lib/format';
-import TribalThorn from '@/components/ornaments/TribalThorn/TribalThorn';
+import TribalGlyph from '@/components/ornaments/TribalGlyph/TribalGlyph';
 import ExternalLink from '@/components/ui/ExternalLink/ExternalLink';
 import type { ProjectItemProps } from '@/types/components/sections';
 import styles from './Projects.module.css';
@@ -54,7 +56,10 @@ export default function ProjectItem({
             ))}
           </span>
           <span className={styles.description}>{project.description}</span>
-          <TribalThorn className={styles.thorn} />
+          <TribalGlyph
+            name={glyphAt(PROJECT_GLYPHS, index)}
+            className={styles.glyph}
+          />
         </span>
       </ExternalLink>
     </li>

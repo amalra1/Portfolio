@@ -7,6 +7,7 @@ import { ScrollTrigger } from '@/lib/gsap';
 import { useActiveSection } from '@/hooks/useActiveSection';
 import { useLanguage } from '@/hooks/useLanguage';
 import Header from '@/components/layout/Header/Header';
+import Preloader from '@/components/layout/Preloader/Preloader';
 import About from '@/components/sections/About/About';
 import Contact from '@/components/sections/Contact/Contact';
 import Experience from '@/components/sections/Experience/Experience';
@@ -30,6 +31,7 @@ export default function Portfolio() {
       <a href="#main" className="skip-link mono">
         {data.navigation.skipToContent}
       </a>
+      <Preloader />
       <Header navigation={data.navigation} activeSection={activeSection} />
       <main id="main" key={language}>
         <Hero data={data.hero} />

@@ -11,7 +11,7 @@ const jobs = [
   { dir: 'badges', width: 240, quality: 90, removeSource: true },
 ];
 
-const KEEP_AS_IS = new Set(['pedro-cutout.png']);
+const KEEP_AS_IS = new Set(['pedro-side-cutout.png', 'pedro-side-ink.png']);
 
 for (const job of jobs) {
   const dir = path.join(root, job.dir);

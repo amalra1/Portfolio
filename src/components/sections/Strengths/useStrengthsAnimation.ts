@@ -3,26 +3,38 @@
 import type { RefObject } from 'react';
 import { gsap, ScrollTrigger } from '@/lib/gsap';
 import { useMediaAnimation } from '@/hooks/useMediaAnimation';
-import styles from './Strengths.module.css';
+import cellStyles from './SkillFlash.module.css';
 
-export function useStrengthsAnimation(ref: RefObject<HTMLUListElement | null>) {
+const STAMP_EASE = 'back.out(2.4)';
+
+export function useStrengthsAnimation(ref: RefObject<HTMLDivElement | null>) {
   useMediaAnimation(
     () => {
-      const root = ref.current;
-      if (!root) return;
-      const cells = root.querySelectorAll(`.${styles.cell}`);
-      gsap.set(cells, { y: 60, autoAlpha: 0, rotate: -1.5 });
-      ScrollTrigger.batch(cells, {
-        start: 'top 88%',
+      const sheet = ref.current;
+      if (!sheet) return;
+
+      gsap.from(sheet, {
+        y: 90,
+        rotate: -4,
+        autoAlpha: 0,
+        duration: 1.1,
+        ease: 'power4.out',
+        scrollTrigger: { trigger: sheet, start: 'top 88%', once: true },
+      });
+
+      const stamps = sheet.querySelectorAll(`.${cellStyles.stamp}`);
+      gsap.set(stamps, { scale: 1.9, rotate: -35, autoAlpha: 0 });
+      ScrollTrigger.batch(stamps, {
+        start: 'top 85%',
         once: true,
         onEnter: (batch) =>
           gsap.to(batch, {
-            y: 0,
+            scale: 1,
             rotate: 0,
             autoAlpha: 1,
-            stagger: 0.1,
-            duration: 0.9,
-            ease: 'power4.out',
+            stagger: 0.14,
+            duration: 0.55,
+            ease: STAMP_EASE,
             overwrite: true,
           }),
       });

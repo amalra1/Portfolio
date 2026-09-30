@@ -81,11 +81,6 @@
   aspect-ratio: 3 / 4;
   object-fit: cover;
   filter: grayscale(1) contrast(1.15);
-  transition: filter var(--dur);
-}
-
-.photo:hover img {
-  filter: none;
 }
 
 .photo:nth-child(1) .caption {
@@ -128,5 +123,19 @@
 
   .photo:nth-child(2) {
     margin-top: 70%;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .photo img {
+    transition: filter var(--dur);
+  }
+
+  .photo:hover {
+    z-index: 2;
+  }
+
+  .photo:hover img {
+    filter: none;
   }
 }

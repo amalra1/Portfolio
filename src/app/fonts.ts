@@ -1,4 +1,3 @@
-import localFont from 'next/font/local';
 import { Anton, Archivo, JetBrains_Mono, New_Rocker } from 'next/font/google';
 
 export const display = Anton({
@@ -6,13 +5,6 @@ export const display = Anton({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-display',
-});
-
-export const brand = localFont({
-  src: '../assets/fonts/EclipsedBlazzing.ttf',
-  weight: '400',
-  display: 'swap',
-  variable: '--font-brand',
 });
 
 export const sans = Archivo({
@@ -35,4 +27,4 @@ export const gothic = New_Rocker({
   variable: '--font-gothic',
 });
 
-export const fontClassNames = `${display.variable} ${brand.variable} ${sans.variable} ${mono.variable} ${gothic.variable}`;
+export const fontClassNames = `${display.variable} ${sans.variable} ${mono.variable} ${gothic.variable}`;

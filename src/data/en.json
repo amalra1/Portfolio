@@ -41,11 +41,11 @@
     "photos": [
       {
         "key": "camera",
-        "caption": "Fig. 01 — Golden hour"
+        "caption": "Fig. 01 — Me"
       },
       {
         "key": "bike",
-        "caption": "Fig. 02 — Night trail"
+        "caption": "Fig. 02 — Bike"
       }
     ]
   },
@@ -89,7 +89,7 @@
   },
   "interlude": {
     "key": "trail",
-    "caption": "Fig. 03 — Trail",
+    "caption": "Fig. 03 — Hike",
     "title": "Off the keyboard"
   },
   "experience": {
@@ -277,7 +277,6 @@
     }
   },
   "footer": {
-    "builtWith": "Built with Next.js + GSAP",
     "backToTop": "Back to top",
     "rights": "All rights reserved"
   }

@@ -1,0 +1,104 @@
+.cell {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'title stamp'
+    'description description'
+    'badges badges';
+  align-items: start;
+  gap: var(--space-2) var(--space-3);
+  padding: var(--space-4);
+  background: var(--fg);
+  color: var(--bg);
+  transition:
+    background-color var(--dur-fast),
+    color var(--dur-fast);
+}
+
+.stamp {
+  grid-area: stamp;
+  display: block;
+}
+
+.glyph {
+  display: block;
+  width: 72px;
+  height: 72px;
+  color: var(--red);
+  transition: transform var(--dur) var(--ease-out);
+}
+
+.title {
+  grid-area: title;
+  align-self: end;
+  font-size: var(--step-2);
+  overflow-wrap: anywhere;
+}
+
+.description {
+  grid-area: description;
+  color: rgba(15, 11, 11, 0.74);
+  transition: color var(--dur-fast);
+}
+
+.badges {
+  grid-area: badges;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.badge {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--bg);
+  background: var(--fg);
+  transition: transform var(--dur) var(--ease-out);
+}
+
+.badge:hover {
+  transform: translateY(-4px);
+}
+
+.badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (min-width: 600px) {
+  .cell {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto auto;
+    grid-template-areas: 'stamp' 'title' 'description' 'badges';
+    min-height: 460px;
+  }
+
+  .stamp {
+    justify-self: center;
+    align-self: center;
+    margin-block: var(--space-4);
+  }
+
+  .glyph {
+    width: clamp(104px, 11vw, 150px);
+    height: clamp(104px, 11vw, 150px);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cell:hover {
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  .cell:hover .description {
+    color: var(--fg-dim);
+  }
+
+  .cell:hover .glyph {
+    transform: rotate(-14deg) scale(1.12);
+  }
+}

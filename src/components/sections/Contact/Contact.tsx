@@ -83,7 +83,6 @@ export default function Contact({ data, footer, name }: ContactProps) {
           © {new Date().getFullYear()} {name.firstName} {name.lastName} —{' '}
           {footer.rights}
         </span>
-        <span>{footer.builtWith}</span>
         <a
           href={`#${HERO_SECTION_ID}`}
           className={styles['top-link']}

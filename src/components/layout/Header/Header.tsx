@@ -9,17 +9,21 @@ import { useHeaderScrolled } from '@/hooks/useHeaderScrolled';
 import LangToggle from '@/components/layout/LangToggle/LangToggle';
 import MobileMenu from '@/components/layout/MobileMenu/MobileMenu';
 import NavList from '@/components/layout/NavList/NavList';
+import TribalSun from '@/components/ornaments/TribalSun/TribalSun';
 import type {
   HeaderProps,
   SectionNavigateHandler,
 } from '@/types/components/layout';
 import styles from './Header.module.css';
+import { useHeaderAnimation } from './useHeaderAnimation';
 
 export default function Header({ navigation, activeSection }: HeaderProps) {
   const [open, setOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const brandRef = useRef<HTMLAnchorElement>(null);
   const lenis = useLenis();
   const scrolled = useHeaderScrolled();
+  useHeaderAnimation(brandRef);
 
   const closeMenu = useCallback(() => setOpen(false), []);
 
@@ -40,12 +44,13 @@ export default function Header({ navigation, activeSection }: HeaderProps) {
         )}
       >
         <a
+          ref={brandRef}
           href={`#${HERO_SECTION_ID}`}
           className={styles.brand}
           onClick={(event) => goTo(event, HERO_SECTION_ID)}
           aria-label="Pedro Chapelin"
         >
-          Pedro
+          <TribalSun className={styles.sun} />
         </a>
 
         <nav className={styles.nav} aria-label="Primary">

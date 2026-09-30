@@ -1,94 +1,61 @@
+.sheet {
+  position: relative;
+  color: var(--bg);
+  background: var(--fg);
+  border: var(--border-thick) solid var(--fg);
+  box-shadow: 14px 14px 0 var(--red);
+}
+
+.sheet::before,
+.sheet::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  width: clamp(72px, 8vw, 104px);
+  height: 24px;
+  background: var(--red);
+}
+
+.sheet::before {
+  left: -12px;
+  rotate: -38deg;
+}
+
+.sheet::after {
+  right: -12px;
+  rotate: 38deg;
+}
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  padding: var(--space-3) var(--space-4);
+}
+
+.foot {
+  border-top: var(--border-thick) solid var(--bg);
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-4);
-}
-
-.cell {
-  position: relative;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: var(--space-4);
-  min-height: 260px;
-  padding: var(--space-4);
-  border: var(--border-thick) solid var(--fg);
+  gap: var(--border-thick);
   background: var(--bg);
-  box-shadow: 12px 12px 0 var(--red);
-  transition:
-    transform var(--dur) var(--ease-out),
-    box-shadow var(--dur) var(--ease-out),
-    background-color var(--dur-fast),
-    color var(--dur-fast);
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .cell:hover {
-    transform: translate(6px, 6px);
-    box-shadow: 4px 4px 0 var(--fg);
-    background: var(--red);
-    color: var(--bg);
-  }
-
-  .cell:hover .index,
-  .cell:hover .description {
-    color: var(--bg);
-  }
-}
-
-.top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.index {
-  font-size: var(--step-3);
-  line-height: 1;
-  color: var(--red);
-  transition: color var(--dur-fast);
-}
-
-.spike {
-  width: 36px;
-  height: auto;
-  color: currentColor;
-  opacity: 0.8;
-}
-
-.title {
-  font-size: var(--step-2);
-  align-self: end;
-  overflow-wrap: anywhere;
-}
-
-.description {
-  color: var(--fg-dim);
-  transition: color var(--dur-fast);
-}
-
-.badges {
+.legend {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
+  color: var(--red);
 }
 
-.badge {
-  display: block;
-  width: 48px;
-  height: 48px;
-  border: 2px solid var(--fg);
-  background: var(--fg);
-  transition: transform var(--dur) var(--ease-out);
-}
-
-.badge:hover {
-  transform: translateY(-4px);
-}
-
-.badge img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.legendGlyph {
+  width: 22px;
+  height: 22px;
 }
 
 @media (min-width: 600px) {
@@ -98,12 +65,11 @@
 }
 
 @media (min-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-5);
+  .sheet {
+    rotate: -0.6deg;
   }
 
-  .cell:nth-child(3n + 2) {
-    margin-top: var(--space-6);
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

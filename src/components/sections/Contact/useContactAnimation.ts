@@ -5,6 +5,9 @@ import { gsap } from '@/lib/gsap';
 import { useMediaAnimation } from '@/hooks/useMediaAnimation';
 import styles from './Contact.module.css';
 
+const SUN_TURN_DEGREES = 240;
+const SUN_SCRUB_SECONDS = 0.6;
+
 export function useContactAnimation(ref: RefObject<HTMLElement | null>) {
   useMediaAnimation(
     () => {
@@ -24,6 +27,21 @@ export function useContactAnimation(ref: RefObject<HTMLElement | null>) {
             start: 'top bottom',
             end: 'top 35%',
             scrub: true,
+          },
+        },
+      );
+
+      gsap.fromTo(
+        root.querySelector(`.${styles.sun}`),
+        { rotate: -SUN_TURN_DEGREES / 2 },
+        {
+          rotate: SUN_TURN_DEGREES / 2,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: root,
+            start: 'top bottom',
+            end: 'bottom bottom',
+            scrub: SUN_SCRUB_SECONDS,
           },
         },
       );

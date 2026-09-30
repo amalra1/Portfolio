@@ -1,6 +1,7 @@
 import type { StaticImageData } from 'next/image';
 
-import pedroCutout from '@/assets/images/pedro-cutout.webp';
+import pedroSideCutout from '@/assets/images/pedro-side-cutout.webp';
+import pedroSideInk from '@/assets/images/pedro-side-ink.webp';
 import meCamera from '@/assets/images/me-camera.webp';
 import meBike from '@/assets/images/me-bike.webp';
 import meAirsoft from '@/assets/images/me-airsoft.webp';
@@ -29,7 +30,8 @@ import reduxV from '@/assets/projects/redux-v.webp';
 import secretSanta from '@/assets/projects/secret-santa.webp';
 import zanagotchi from '@/assets/projects/zanagotchi.webp';
 
-export const heroImage = pedroCutout;
+export const heroImage = pedroSideCutout;
+export const heroInk = pedroSideInk;
 
 export const photos: Record<string, StaticImageData> = {
   camera: meCamera,

@@ -1,16 +1,20 @@
 'use client';
 
+import { useRef } from 'react';
 import Image from 'next/image';
 import { useLenis } from 'lenis/react';
 import { photos } from '@/data/images';
+import { PHOTO_GLYPHS } from '@/constants/glyphs';
 import { cx } from '@/lib/classNames';
+import { glyphAt } from '@/lib/glyphs';
 import { scrollToTarget } from '@/lib/scroll';
 import Section from '@/components/layout/Section/Section';
 import SectionTitle from '@/components/layout/SectionTitle/SectionTitle';
 import Parallax from '@/components/motion/Parallax/Parallax';
 import ScrubWords from '@/components/motion/ScrubWords/ScrubWords';
-import TribalThorn from '@/components/ornaments/TribalThorn/TribalThorn';
+import TribalGlyph from '@/components/ornaments/TribalGlyph/TribalGlyph';
 import type { AboutProps } from '@/types/components/sections';
+import { useAboutAnimation } from './useAboutAnimation';
 import styles from './About.module.css';
 
 const PARAGRAPH_KEY_LENGTH = 24;
@@ -19,6 +23,8 @@ const TRAILING_PHOTO_PARALLAX = 9;
 
 export default function About({ data }: AboutProps) {
   const lenis = useLenis();
+  const photosRef = useRef<HTMLUListElement>(null);
+  useAboutAnimation(photosRef);
 
   return (
     <Section id="about" label={data.label} titleId="about-title">
@@ -51,7 +57,7 @@ export default function About({ data }: AboutProps) {
           </a>
         </div>
 
-        <ul className={styles.photos}>
+        <ul ref={photosRef} className={styles.photos}>
           {data.photos.map((photo, i) => {
             const src = photos[photo.key];
             if (!src) return null;
@@ -68,7 +74,10 @@ export default function About({ data }: AboutProps) {
                     sizes="(min-width: 900px) 28vw, 66vw"
                   />
                 </Parallax>
-                <TribalThorn className={styles.mark} />
+                <TribalGlyph
+                  name={glyphAt(PHOTO_GLYPHS, i)}
+                  className={styles.mark}
+                />
                 <span className={cx(styles.caption, 'mono')}>
                   {photo.caption}
                 </span>

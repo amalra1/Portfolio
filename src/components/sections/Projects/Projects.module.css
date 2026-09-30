@@ -174,7 +174,7 @@
   max-width: 52ch;
 }
 
-.thorn {
+.glyph {
   width: 40px;
   color: var(--red);
   margin-top: var(--space-2);

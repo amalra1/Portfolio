@@ -8,6 +8,7 @@ import type {
   PersonName,
   Project,
   ProjectsData,
+  Skill,
   StrengthsData,
 } from '@/types/portfolio';
 
@@ -21,6 +22,11 @@ export interface AboutProps {
 
 export interface StrengthsProps {
   data: StrengthsData;
+}
+
+export interface SkillFlashProps {
+  skill: Skill;
+  index: number;
 }
 
 export interface InterludeProps {

@@ -3,12 +3,15 @@
 import { useRef } from 'react';
 import Image from 'next/image';
 import { HERO_SECTION_ID } from '@/constants/sections';
-import { heroImage } from '@/data/images';
+import { heroImage, heroInk } from '@/data/images';
 import { cx } from '@/lib/classNames';
 import TribalSun from '@/components/ornaments/TribalSun/TribalSun';
 import type { HeroProps } from '@/types/components/sections';
+import HeroTintFilter from './HeroTintFilter';
 import { useHeroAnimation } from './useHeroAnimation';
 import styles from './Hero.module.css';
+
+const PORTRAIT_SIZES = '(min-width: 900px) 83svh, 100vw';
 
 export default function Hero({ data }: HeroProps) {
   const ref = useRef<HTMLElement>(null);
@@ -21,8 +24,6 @@ export default function Hero({ data }: HeroProps) {
       className={cx(styles.hero, 'band-red')}
       aria-label={data.fullName}
     >
-      <TribalSun className={styles.sun} />
-
       <div className={cx(styles.meta, 'mono')}>
         <span>
           <strong>{data.role}</strong>
@@ -31,19 +32,37 @@ export default function Hero({ data }: HeroProps) {
         <span>{new Date().getFullYear()} — Portfolio</span>
       </div>
 
+      <TribalSun className={styles.sun} />
+
+      <div className={styles.portrait} aria-hidden="true">
+        <HeroTintFilter />
+        <span className={styles.figure}>
+          <Image
+            src={heroImage}
+            alt=""
+            priority
+            className={styles.layer}
+            sizes={PORTRAIT_SIZES}
+          />
+        </span>
+        <span className={styles.ink}>
+          <Image
+            src={heroInk}
+            alt=""
+            priority
+            className={styles.layer}
+            sizes={PORTRAIT_SIZES}
+          />
+        </span>
+      </div>
+
       <div className={styles.stage}>
         <h1 className={cx(styles.name, 'display')}>
           <span className={cx(styles.line, styles.first)}>
             {data.firstName}
           </span>
-          <span className={styles.figure} aria-hidden="true">
-            <Image
-              src={heroImage}
-              alt=""
-              priority
-              className={styles.photo}
-              sizes="(min-width: 900px) 20vw, 72vw"
-            />
+          <span className={styles.outline} aria-hidden="true">
+            {data.firstName}
           </span>
           <span className={cx(styles.line, styles.last)}>{data.lastName}</span>
         </h1>

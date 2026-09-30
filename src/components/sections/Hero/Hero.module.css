@@ -28,20 +28,14 @@
     );
 }
 
-.sun {
-  position: absolute;
-  right: -30vw;
-  top: 34vh;
-  width: clamp(240px, 46vw, 720px);
-  aspect-ratio: 1;
-  color: var(--bg);
-  opacity: 0.12;
-  pointer-events: none;
-  will-change: transform;
+.meta,
+.bottom,
+.last {
+  position: relative;
+  z-index: 2;
 }
 
 .meta {
-  position: relative;
   display: grid;
   gap: var(--space-2);
   max-width: 34ch;
@@ -51,14 +45,59 @@
   font-weight: 600;
 }
 
+.portrait {
+  --portrait-height: calc(100vw / var(--portrait-ratio));
+  --portrait-ratio: 0.9406;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: var(--portrait-height);
+  width: calc(var(--portrait-height) * var(--portrait-ratio));
+  margin-left: calc(var(--portrait-height) * var(--portrait-ratio) / -2);
+}
+
+.sun {
+  position: absolute;
+  right: -30vw;
+  top: 34vh;
+  width: clamp(240px, 46vw, 720px);
+  aspect-ratio: 1;
+  color: var(--bg);
+  opacity: 0.14;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.figure,
+.ink {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 5%,
+    #000 88%,
+    transparent
+  );
+}
+
+.figure .layer {
+  filter: contrast(1.15) url('#hero-tint');
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .stage {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: start;
-  align-content: end;
-  gap: 0;
-  margin-top: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: var(--space-5);
 }
 
 .name {
@@ -68,7 +107,8 @@
   letter-spacing: -0.02em;
 }
 
-.line {
+.line,
+.outline {
   display: block;
   overflow: hidden;
   white-space: nowrap;
@@ -76,34 +116,30 @@
   margin: -0.12em 0 -0.04em -0.04em;
 }
 
+.outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--bg);
+  pointer-events: none;
+}
+
 .last {
-  justify-self: end;
+  align-self: flex-end;
+  padding: 0.12em 0.05em 0.08em 0;
   color: var(--fg);
-}
-
-.figure {
-  position: relative;
-  width: min(58vw, 300px);
-  aspect-ratio: 684 / 1302;
-  margin-block: calc(var(--space-2) * -1);
-  justify-self: center;
-  mix-blend-mode: luminosity;
-}
-
-.photo {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: contrast(1.2) brightness(1.05);
+  text-shadow: 6px 6px 0 var(--bg);
 }
 
 .bottom {
-  position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: flex-end;
-  gap: var(--space-4);
-  margin-top: var(--space-6);
+  gap: var(--space-3) var(--space-5);
+  margin-top: var(--space-5);
 }
 
 .cue {
@@ -122,7 +158,6 @@
 
 .tagline {
   max-width: 28ch;
-  text-align: right;
 }
 
 @media (min-width: 900px) {
@@ -130,32 +165,16 @@
     padding-bottom: var(--space-4);
   }
 
-  .stage {
-    grid-template-columns: auto auto auto;
-    align-items: end;
-    justify-content: space-between;
-    column-gap: 2vw;
-    margin-top: var(--space-5);
-  }
-
-  .name {
-    font-size: clamp(6rem, 12.4vw, 15rem);
-    line-height: 0.96;
-  }
-
-  .last {
-    justify-self: auto;
-  }
-
-  .figure {
-    width: clamp(220px, 19vw, 330px);
-    margin-block: 0;
-    margin-bottom: -0.1em;
-    align-self: end;
+  .portrait {
+    --portrait-height: min(88svh, 60vw);
   }
 
   .sun {
     right: -12vw;
     top: 4vh;
+  }
+
+  .name {
+    font-size: clamp(6rem, 12.4vw, 15rem);
   }
 }
