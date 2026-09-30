@@ -93,7 +93,6 @@
 }
 
 .stage {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -107,24 +106,12 @@
   letter-spacing: -0.02em;
 }
 
-.line,
-.outline {
+.line {
   display: block;
   overflow: hidden;
   white-space: nowrap;
   padding: 0.12em 0 0.04em;
   margin: -0.12em 0 -0.04em -0.04em;
-}
-
-.outline {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  color: transparent;
-  -webkit-text-stroke: 2px var(--bg);
-  pointer-events: none;
 }
 
 .last {

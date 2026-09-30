@@ -8,11 +8,6 @@ import styles from './Hero.module.css';
 
 const PORTRAIT_SINK = 14;
 const PORTRAIT_SINK_MOBILE = 8;
-const CHAR_RISE = {
-  yPercent: 115,
-  duration: 1.1,
-  stagger: { each: 0.035, from: 'start' },
-} as const;
 
 export function useHeroAnimation(ref: RefObject<HTMLElement | null>) {
   useMediaAnimation(
@@ -21,7 +16,6 @@ export function useHeroAnimation(ref: RefObject<HTMLElement | null>) {
       if (!root) return;
 
       const lines = root.querySelectorAll<HTMLElement>(`.${styles.line}`);
-      const outlines = root.querySelectorAll<HTMLElement>(`.${styles.outline}`);
       const figure = root.querySelector(`.${styles.figure}`);
       const ink = root.querySelector(`.${styles.ink}`);
       const sun = root.querySelector(`.${styles.sun}`);
@@ -39,15 +33,13 @@ export function useHeroAnimation(ref: RefObject<HTMLElement | null>) {
           charsClass: 'hero-char',
           aria: 'auto',
         });
-        const outlineSplit = SplitText.create(outlines, {
-          type: 'chars',
-          charsClass: 'hero-char',
-          aria: 'none',
-        });
         gsap
           .timeline({ defaults: { ease: 'power4.out' } })
-          .from(split.chars, { ...CHAR_RISE })
-          .from(outlineSplit.chars, { ...CHAR_RISE }, '<')
+          .from(split.chars, {
+            yPercent: 115,
+            duration: 1.1,
+            stagger: { each: 0.035, from: 'start' },
+          })
           .to(
             figure,
             { clipPath: 'inset(0% 0 0 0)', duration: 1.2, ease: 'expo.inOut' },
@@ -89,11 +81,7 @@ export function useHeroAnimation(ref: RefObject<HTMLElement | null>) {
             scrub: true,
           },
         })
-        .to(
-          [lines[0], ...outlines],
-          { xPercent: mobile ? -6 : -12, ease: 'none' },
-          0,
-        )
+        .to(lines[0], { xPercent: mobile ? -6 : -12, ease: 'none' }, 0)
         .to(lines[1], { xPercent: mobile ? 6 : 12, ease: 'none' }, 0)
         .to(
           [figure, ink],

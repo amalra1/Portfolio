@@ -61,9 +61,6 @@ export default function Hero({ data }: HeroProps) {
           <span className={cx(styles.line, styles.first)}>
             {data.firstName}
           </span>
-          <span className={styles.outline} aria-hidden="true">
-            {data.firstName}
-          </span>
           <span className={cx(styles.line, styles.last)}>{data.lastName}</span>
         </h1>
       </div>
