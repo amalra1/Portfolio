@@ -1,0 +1,39 @@
+.section {
+  position: relative;
+  z-index: 1;
+  padding-block: var(--space-8);
+}
+
+.inner {
+  padding-inline: var(--gutter);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+  padding-inline: var(--gutter);
+  color: var(--fg-dim);
+}
+
+.inner .label {
+  padding-inline: 0;
+}
+
+.index {
+  color: var(--red);
+}
+
+.word {
+  font-size: calc(var(--step-2) * 0.9);
+  color: var(--fg);
+  line-height: 1;
+}
+
+.spikes {
+  width: 64px;
+  height: auto;
+  color: var(--red);
+  flex-shrink: 0;
+}

@@ -1,0 +1,235 @@
+/* ---------- filter ---------- */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.chip {
+  display: inline-flex;
+  gap: 0.6em;
+  padding: 0.55em 0.9em;
+  border: 2px solid var(--fg);
+  color: var(--fg);
+  transition:
+    background-color var(--dur-fast),
+    color var(--dur-fast),
+    border-color var(--dur-fast),
+    box-shadow var(--dur-fast),
+    transform var(--dur-fast);
+}
+
+.chip:hover {
+  box-shadow: 4px 4px 0 var(--red);
+  transform: translate(-2px, -2px);
+}
+
+.chipActive {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--bg);
+}
+
+.chipCount {
+  opacity: 0.7;
+}
+
+.count {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4em;
+  font-size: var(--step-2);
+  line-height: 1;
+  color: var(--fg);
+}
+
+.count small {
+  font-size: var(--step--1);
+  color: var(--fg-dim);
+}
+
+/* ---------- list ---------- */
+.list {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.item {
+  position: relative;
+  display: grid;
+  gap: var(--space-4);
+}
+
+.link {
+  display: contents;
+}
+
+.figure {
+  position: relative;
+  border: var(--border-thick) solid var(--fg);
+  background: var(--bg-2);
+  box-shadow: 12px 12px 0 var(--red);
+  overflow: visible;
+  transition:
+    transform var(--dur) var(--ease-out),
+    box-shadow var(--dur) var(--ease-out);
+}
+
+.figure img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.1);
+  transition: filter var(--dur);
+}
+
+.item:hover .figure {
+  transform: translate(-4px, -4px);
+  box-shadow: 16px 16px 0 var(--red);
+}
+
+.item:hover .figure img {
+  filter: none;
+}
+
+.index {
+  position: absolute;
+  left: calc(var(--space-3) * -1);
+  top: calc(var(--space-4) * -1);
+  padding: 0.1em 0.3em;
+  background: var(--red);
+  color: var(--bg);
+  font-size: var(--step-2);
+  line-height: 1;
+  z-index: 1;
+}
+
+.body {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.title {
+  font-size: clamp(2.75rem, 1.5rem + 5vw, 6rem);
+  line-height: 0.96;
+  overflow-wrap: anywhere;
+}
+
+.arrow {
+  flex-shrink: 0;
+  width: 1.4em;
+  height: 1.4em;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--fg);
+  font-size: var(--step-1);
+  transition:
+    background-color var(--dur-fast),
+    color var(--dur-fast),
+    transform var(--dur) var(--ease-out);
+}
+
+.item:hover .arrow {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--bg);
+  transform: translate(3px, -3px);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tag {
+  padding: 0.3em 0.6em;
+  border: var(--border) solid var(--line);
+  color: var(--fg-dim);
+}
+
+.tagCategory {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.description {
+  color: var(--fg-dim);
+  max-width: 52ch;
+}
+
+.thorn {
+  width: 40px;
+  color: var(--red);
+  margin-top: var(--space-2);
+}
+
+.empty {
+  padding: var(--space-6);
+  border: var(--border-thick) dashed var(--line);
+  text-align: center;
+  color: var(--fg-dim);
+}
+
+@media (min-width: 900px) {
+  .list {
+    gap: var(--space-7);
+  }
+
+  .item {
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    column-gap: var(--space-5);
+  }
+
+  /* odd: image left, text right — even: text left, image right */
+  .item:nth-child(odd) .figure {
+    grid-column: 1 / 8;
+  }
+  .item:nth-child(odd) .body {
+    grid-column: 8 / 13;
+  }
+  .item:nth-child(even) .figure {
+    grid-column: 6 / 13;
+    grid-row: 1;
+  }
+  .item:nth-child(even) .body {
+    grid-column: 1 / 6;
+    grid-row: 1;
+    text-align: right;
+    justify-items: end;
+  }
+  .item:nth-child(even) .head {
+    flex-direction: row-reverse;
+  }
+  .item:nth-child(even) .meta {
+    justify-content: flex-end;
+  }
+  .item:nth-child(even) .index {
+    left: auto;
+    right: calc(var(--space-3) * -1);
+  }
+
+  /* every third item pushes down for a looser rhythm */
+  .item:nth-child(3n) .body {
+    margin-top: var(--space-6);
+  }
+}

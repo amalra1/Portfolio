@@ -1,0 +1,17 @@
+.title {
+  font-size: var(--step-4);
+  margin-bottom: var(--space-6);
+  overflow-wrap: anywhere;
+  will-change: transform;
+}
+
+.line {
+  display: block;
+  overflow: hidden;
+  padding: 0.12em 0 0.08em;
+  margin-top: -0.12em;
+}
+
+.lineInner {
+  display: block;
+}

@@ -1,33 +1,115 @@
+/* ==========================================================================
+   Design tokens — brutalist / red / black / off-white
+   Contrast note: --red (#B5121B) on --bg (#0F0B0B) is ~3:1, so red is used
+   only for large type (>= 24px) and for solid blocks. Body copy is always
+   --fg on --bg. Text on red bands is large and black.
+   ========================================================================== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #0f0b0b;
+  --bg-2: #171112;
+  --fg: #f2ede4;
+  --fg-dim: rgba(242, 237, 228, 0.62);
+  --fg-faint: rgba(242, 237, 228, 0.3);
+  --red: #b5121b;
+  --red-deep: #8a0d14;
+  --line: rgba(242, 237, 228, 0.14);
+  --line-strong: var(--fg);
+
+  --border: 1px;
+  --border-thick: 3px;
+  --header-h: 56px;
+  --gutter: clamp(1rem, 4vw, 3rem);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.5rem;
+  --space-6: 4rem;
+  --space-7: 6rem;
+  --space-8: clamp(6rem, 12vw, 12rem);
+
+  /* fluid type scale */
+  --step--1: clamp(0.75rem, 0.72rem + 0.2vw, 0.875rem);
+  --step-0: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.1rem + 0.8vw, 1.75rem);
+  --step-2: clamp(1.75rem, 1.3rem + 2vw, 3rem);
+  --step-3: clamp(2.25rem, 1.4rem + 4vw, 5rem);
+  --step-4: clamp(4rem, 2rem + 9.5vw, 12rem);
+  --step-giant: clamp(4.5rem, 20vw, 24rem);
+
+  --lh-display: 0.96;
+  --track-display: -0.01em;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.87, 0, 0.13, 1);
+  --dur-fast: 0.2s;
+  --dur: 0.5s;
+  --dur-slow: 1.2s;
+
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html,
+html {
+  -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
+}
+
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  min-height: 100svh;
+  overflow-x: clip;
+  background:
+    radial-gradient(
+      120% 80% at 100% 0%,
+      rgba(181, 18, 27, 0.16),
+      transparent 55%
+    ),
+    radial-gradient(
+      90% 60% at 0% 100%,
+      rgba(181, 18, 27, 0.12),
+      transparent 60%
+    ),
+    var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans), 'Helvetica Neue', Arial, sans-serif;
+  font-size: var(--step-0);
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* Matte film grain over everything (fixed, non-interactive). */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.16;
+  mix-blend-mode: screen;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.75 0 0 0 0 0.7 0 0 0 0.5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -35,8 +117,112 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+::selection {
+  background: var(--red);
+  color: var(--bg);
+}
+
+/* ==========================================================================
+   Focus
+   ========================================================================== */
+:focus-visible {
+  outline: var(--border-thick) solid var(--red);
+  outline-offset: 4px;
+}
+
+.band-red :focus-visible {
+  outline-color: var(--fg);
+}
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+.display {
+  font-family: var(--font-display), Impact, 'Arial Narrow Bold', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: var(--lh-display);
+  letter-spacing: var(--track-display);
+}
+
+.mono {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo,
+    monospace;
+  font-size: var(--step--1);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+}
+
+.gothic {
+  font-family: var(--font-gothic), 'Old English Text MT', serif;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--fg-dim);
+}
+
+.band-red {
+  background: var(--red);
+  color: var(--bg);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 1000;
+  padding: var(--space-2) var(--space-3);
+  background: var(--red);
+  color: var(--bg);
+  transform: translateY(-200%);
+  transition: transform var(--dur-fast);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Motion safety
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

@@ -1,53 +1,79 @@
 {
   "hero": {
-    "name": "Pedro Amaral Chapelin",
-    "title": "Desenvolvedor FullStack 🖥️",
-    "description": "Curto coisas maneiras e deixar o que é chato mais legal.",
-    "contactButton": "Fale Comigo"
+    "firstName": "Pedro",
+    "lastName": "Chapelin",
+    "fullName": "Pedro Amaral Chapelin",
+    "role": "Desenvolvedor Full-Stack",
+    "location": "Curitiba, Brasil",
+    "tagline": "Curto coisas maneiras e deixar o que é chato mais legal.",
+    "scrollCue": "Rolar",
+    "marquee": [
+      "Full-Stack",
+      "Java",
+      "Spring Boot",
+      "React",
+      "TypeScript",
+      "Visão Computacional",
+      "Game Dev",
+      "AWS",
+      "IA Generativa"
+    ]
   },
   "navigation": {
-    "home": "Início",
     "about": "Sobre",
     "strengths": "Habilidades",
-    "workExperiences": "Experiências",
-    "projects": "Projetos",
-    "contact": "Contato"
+    "experience": "Experiência",
+    "projects": "Trabalhos",
+    "contact": "Contato",
+    "menu": "Menu",
+    "close": "Fechar",
+    "skipToContent": "Pular para o conteúdo",
+    "language": "Trocar idioma"
   },
   "about": {
+    "label": "Sobre",
     "title": "Sobre",
-    "subtitle": "Um pouco sobre mim",
-    "description": [
-      "Sou o Pedro, um Desenvolvedor Full-Stack que também gosta de se aventurar em diversas outras áreas além de desenvolvimento web, como Visão Computacional e Desenvolvimento de Jogos. Meu principal objetivo é sempre extrair o máximo de tudo o que faço e ajudar as pessoas no caminho. Aspiro me tornar alguém que os outros procuram quando precisam de ajuda ou de alguma ideia.",
-      "Em cada projeto do qual faço parte, trago uma mistura de domínio técnico (às vezes nem tanto inicialmente, mas que é sempre construído rapidamente), comprometimento e comunicação clara. Seja apresentando melhorias, esclarecendo requisitos ou definindo planos de ação, estou sempre pronto para seguir em frente, independentemente da tecnologia utilizada no projeto.",
-      "Vamos trabalhar juntos para atingir nossos objetivos e aprender muito no processo. Me chame pra gente começar essa parada!"
+    "paragraphs": [
+      "Desenvolvedor Full-Stack. Java e Spring no back end, React e TypeScript no front. Também me aventuro em Visão Computacional e Game Dev.",
+      "Extraio o máximo de tudo que construo e ajudo as pessoas no caminho. Comunicação clara, comprometimento de verdade e aprendizado rápido do que o projeto precisar."
+    ],
+    "cta": "Me chama",
+    "photos": [
+      {
+        "key": "camera",
+        "caption": "Fig. 01 — Golden hour"
+      },
+      {
+        "key": "bike",
+        "caption": "Fig. 02 — Trilha noturna"
+      }
     ]
   },
   "strengths": {
+    "label": "Habilidades",
     "title": "O que sei",
-    "subtitle": "Minhas habilidades técnicas",
+    "marquee": [
+      "Habilidades",
+      "Pontos fortes"
+    ],
     "skills": [
       {
-        "icon": "Code",
         "title": "Desenvolvimento Web",
         "description": "Experiência em desenvolvimento Full-Stack utilizando tecnologias como Java para o backend, Typescript e React para o frontend e muitas outras ferramentas úteis."
       },
       {
-        "icon": "Visibility",
         "title": "Visão Computacional",
         "description": "Conhecimento em processamento de imagens e reconhecimento de padrões com OpenCV e Python."
       },
       {
-        "icon": "Cached",
         "title": "Metodologias Ágeis",
         "description": "Experiência com Scrum e Kanban para um gerenciamento de projetos eficiente. Uso de ferramentas como Jira e Confluence."
       },
       {
-        "icon": "SportsEsports",
         "title": "Desenvolvimento de Jogos",
         "description": "Projetos pessoais explorando lógica e mecânicas de jogos, uso de ferramentas como Unity, Allegro e Verilog para manipulação de hardware."
       },
       {
-        "icon": "Cloud",
         "title": "Computação em Nuvem",
         "description": "Familiaridade com serviços da AWS para aplicações escaláveis.",
         "badges": [
@@ -59,153 +85,253 @@
         ]
       },
       {
-        "icon": "AutoAwesome",
         "title": "IA Generativa",
         "description": "Experiência com conceitos complexos de IA Generativa, como RAG, Fine-Tuning e os diferentes usos de APIs."
       }
     ]
   },
-  "workExperiences": {
+  "interlude": {
+    "key": "trail",
+    "caption": "Fig. 03 — Trilha",
+    "title": "Longe do teclado"
+  },
+  "experience": {
+    "label": "Experiência",
     "title": "Por onde estive",
-    "subtitle": "Minhas experiências profissionais",
-    "experiences": [
+    "present": "Agora",
+    "items": [
       {
         "logo": "ciandt",
         "company": "CI&T",
-        "dateRange": "Estagiário de desenvolvimento de software | Março 2025 - Atualmente",
-        "description": "Na CI&T, apliquei meu conhecimento em um papel prático de Full-Stack, desenvolvendo ativamente com Java (Spring Boot) no backend e React no frontend. Também tive contato com Node.js em uma arquitetura BFF e aprimorei minhas habilidades de controle de versão com Gitflow. Além disso, é importante dizer que tive contato com muitas outras ferramentas úteis, como Docker, AWS, DBeaver, IA Generativa, etc."
+        "role": "Estagiário de Desenvolvimento de Software",
+        "start": "2025",
+        "end": null,
+        "startLabel": "Mar 2025",
+        "endLabel": null,
+        "tech": [
+          "Java",
+          "Spring Boot",
+          "React",
+          "Node.js",
+          "Docker",
+          "AWS"
+        ],
+        "description": "Na CI&T, apliquei meu conhecimento em um papel prático de Full-Stack, desenvolvendo ativamente com Java (Spring Boot) no backend e React no frontend. Também tive contato com Node.js em uma arquitetura BFF e aprimorei minhas habilidades de controle de versão com Gitflow. Além disso, tive contato com muitas outras ferramentas úteis, como Docker, AWS, DBeaver e IA Generativa."
       },
       {
         "logo": "vivo",
         "company": "VIVO",
-        "dateRange": "Estagiário de desenvolvimento de software | Agosto 2023 - Fevereiro 2025",
+        "role": "Estagiário de Desenvolvimento de Software",
+        "start": "2023",
+        "end": "2025",
+        "startLabel": "Ago 2023",
+        "endLabel": "Fev 2025",
+        "tech": [
+          "Scrum",
+          "Kanban",
+          "Jira",
+          "SAP"
+        ],
         "description": "Durante meu estágio, construí uma base sólida em arquitetura de software e processos de desenvolvimento, utilizando metodologias ágeis (Scrum/Kanban) e ferramentas como Jira e SAP para documentação e gestão de mudanças."
       }
     ]
   },
   "projects": {
-    "title": "O que fiz",
-    "subtitle": "Alguns dos meus trabalhos",
+    "label": "Trabalhos",
+    "title": "Trabalhos selecionados",
     "categories": {
+      "all": "Tudo",
       "computerVision": "Visão Computacional",
-      "gameDev": "Desenvolvimento de Jogos",
-      "webDev": "Desenvolvimento Web",
-      "other": "Outros",
-      "all": "Tudo"
+      "gameDev": "Game Dev",
+      "webDev": "Web",
+      "other": "Outros"
     },
+    "openLabel": "Abrir projeto",
     "list": [
       {
-        "title": "Classificador de poses de fisiculturismo",
-        "description": "Utilizando a biblioteca MediaPipe do Google, detecta, analisa e classifica poses de musculação a partir de imagens e vídeos.",
+        "slug": "bodybuilding-pose-classifier",
+        "title": "Classificador de Poses de Fisiculturismo",
+        "description": "Utilizando a biblioteca MediaPipe do Google, detecta, analisa e classifica poses de fisiculturismo a partir de imagens e vídeos.",
         "image": "bodybuilding-pose-classifier",
         "url": "https://github.com/amalra1/BodybuildingPoseClassifier",
-        "category": "Visão Computacional"
+        "category": "computerVision",
+        "tech": [
+          "Python",
+          "MediaPipe"
+        ]
       },
       {
-        "title": "Segmentação de textura em imagens de tatuagens",
+        "slug": "image-texture-segmentation",
+        "title": "Segmentação de Textura em Tatuagens",
         "description": "Criação de filtros de detecção de bordas e segmentação de textura em imagens de tatuagens.",
         "image": "image-texture-segmentation",
         "url": "https://github.com/amalra1/ImageTextureSegmentation",
-        "category": "Visão Computacional"
+        "category": "computerVision",
+        "tech": [
+          "Python",
+          "OpenCV"
+        ]
       },
       {
-        "title": "Transformação de perspectiva em imagens",
+        "slug": "perspective-transformation",
+        "title": "Transformação de Perspectiva em Imagens",
         "description": "Aplica transformação de perspectiva em imagens, corrigindo planos inclinados ou fotos em ângulo para gerar uma visualização frontal retangular da área selecionada.",
         "image": "perspective-transformation",
         "url": "https://github.com/amalra1/PerspectiveTransformation",
-        "category": "Visão Computacional"
+        "category": "computerVision",
+        "tech": [
+          "Python",
+          "OpenCV"
+        ]
       },
       {
+        "slug": "zanagotchi",
         "title": "Zanagotchi",
         "description": "Implementação de um tamagotchi em Verilog para ser usado em FPGAs.",
         "image": "zanagotchi",
         "url": "https://github.com/amalra1/TamagotchiFPGA",
-        "category": "Desenvolvimento de Jogos"
+        "category": "gameDev",
+        "tech": [
+          "Verilog",
+          "FPGA"
+        ]
       },
       {
+        "slug": "blocks",
         "title": "Blocks",
-        "description": "Jogo no estilo Candy Crush que fiz, implementado em linguagem C com a biblioteca <allegro.h>.",
+        "description": "Jogo no estilo Candy Crush implementado em C com a biblioteca Allegro.",
         "image": "blocks",
         "url": "https://github.com/amalra1/Blocks",
-        "category": "Desenvolvimento de Jogos"
+        "category": "gameDev",
+        "tech": [
+          "C",
+          "Allegro"
+        ]
       },
       {
-        "title": "Corra das fake news",
+        "slug": "fake-news-game",
+        "title": "Corra das Fake News",
         "description": "Um jogo de tabuleiro para 1-4 jogadores onde o objetivo principal é fugir das fake news.",
         "image": "fake-news-game",
         "url": "https://github.com/amalra1/Fake-News-Game",
-        "category": "Desenvolvimento de Jogos"
+        "category": "gameDev",
+        "tech": [
+          "Game Design"
+        ]
       },
       {
+        "slug": "foda-se",
         "title": "F*da-se",
-        "description": "Jogo de cartas implementado em uma Rede em Anel usando linguagem C, para até 4 jogadores (se conectados na mesma rede LAN).",
+        "description": "Jogo de cartas implementado em uma Rede em Anel usando C, para até 4 jogadores conectados na mesma rede LAN.",
         "image": "foda-se",
         "url": "https://github.com/amalra1/F.da-seGame",
-        "category": "Desenvolvimento de Jogos"
+        "category": "gameDev",
+        "tech": [
+          "C",
+          "Sockets"
+        ]
       },
       {
+        "slug": "portfolio",
         "title": "Portfólio",
-        "description": "Este mesmo site em que você está.",
+        "description": "Este mesmo site em que você está. Brutalista, vermelho, feito com Next.js e GSAP.",
         "image": "portfolio",
-        "url": "",
-        "category": "Desenvolvimento Web"
+        "url": "https://github.com/amalra1/Portfolio",
+        "category": "webDev",
+        "tech": [
+          "Next.js",
+          "TypeScript",
+          "GSAP"
+        ]
       },
       {
+        "slug": "secret-santa",
         "title": "Amigo Secreto",
-        "description": "Aplicação para jogar amigo secreto com os amigos localmente, para até 20 pessoas",
+        "description": "Aplicação para sortear amigo secreto com os amigos, para até 20 pessoas.",
         "image": "secret-santa",
         "url": "https://secret-santa.chapelin.com.br/",
-        "category": "Desenvolvimento Web"
+        "category": "webDev",
+        "tech": [
+          "Web App"
+        ]
       },
       {
-        "title": "Biblioteca de processamento de grafos",
+        "slug": "graphs-processing-library",
+        "title": "Biblioteca de Processamento de Grafos",
         "description": "Série de funções para extrair informações de um determinado grafo.",
         "image": "graphs-processing-library",
         "url": "https://github.com/amalra1/Graphs-Processing-Library",
-        "category": "Outros"
+        "category": "other",
+        "tech": [
+          "Algoritmos"
+        ]
       },
       {
-        "title": "Jogo da vida",
-        "description": "Implementação do Jogo da vida de Conway, junto com uma técnica de IA para reverter para o melhor estado anterior do jogo, com menos células vivas.",
+        "slug": "game-of-life",
+        "title": "Jogo da Vida",
+        "description": "Implementação do Jogo da Vida de Conway, junto com uma técnica de IA para reverter para um melhor estado anterior do jogo, com menos células vivas.",
         "image": "game-of-life",
         "url": "https://github.com/amalra1/GameOfLife",
-        "category": "Outros"
+        "category": "other",
+        "tech": [
+          "Autômatos Celulares",
+          "IA"
+        ]
       },
       {
+        "slug": "redux-v",
         "title": "Redux-V",
         "description": "Um processador feito com Verilog.",
         "image": "redux-v",
         "url": "https://github.com/amalra1/Redux-V",
-        "category": "Outros"
+        "category": "other",
+        "tech": [
+          "Verilog"
+        ]
       },
       {
-        "title": "Gerador de polígonos",
-        "description": "Um gerador de polígonos feito com Javascript.",
+        "slug": "polygon-generator",
+        "title": "Gerador de Polígonos",
+        "description": "Um gerador de polígonos feito com JavaScript.",
         "image": "polygon-generator",
         "url": "https://github.com/amalra1/PolygonGenerator",
-        "category": "Outros"
+        "category": "other",
+        "tech": [
+          "JavaScript"
+        ]
       }
     ]
   },
   "contact": {
-    "title": "Vamos trabalhar juntos",
+    "label": "Contato",
+    "title": [
+      "Vamos",
+      "conversar"
+    ],
+    "subtitle": "Vamos trabalhar juntos para atingir nossos objetivos e aprender muito no processo.",
     "email": "chapelinpedro@gmail.com",
     "socials": [
       {
         "name": "LinkedIn",
-        "url": "https://www.linkedin.com/in/pedro-amaral-chapelin/",
-        "icon": "LinkedIn"
+        "url": "https://www.linkedin.com/in/pedro-amaral-chapelin/"
       },
       {
         "name": "GitHub",
-        "url": "https://github.com/amalra1",
-        "icon": "GitHub"
+        "url": "https://github.com/amalra1"
       },
       {
         "name": "Instagram",
-        "url": "https://www.instagram.com/_amalra/",
-        "icon": "Instagram"
+        "url": "https://www.instagram.com/_amalra/"
       }
-    ]
+    ],
+    "photo": {
+      "key": "airsoft",
+      "caption": "Fig. 04 — Airsoft"
+    }
+  },
+  "footer": {
+    "builtWith": "Feito com Next.js + GSAP",
+    "backToTop": "Voltar ao topo",
+    "rights": "Todos os direitos reservados"
   }
 }

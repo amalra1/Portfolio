@@ -1,12 +1,20 @@
 'use client';
 
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, {
+  createContext,
+  useState,
+  useContext,
+  useEffect,
+  ReactNode,
+} from 'react';
 
-type Language = 'en' | 'pt-BR';
+export type Language = 'en' | 'pt-BR';
 type LanguageContextType = {
   language: Language;
   toggleLanguage: () => void;
 };
+
+const STORAGE_KEY = 'portfolio:lang';
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
   undefined,
@@ -14,6 +22,31 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>('en');
+
+  // Restore the previous choice (or the browser language) after hydration.
+  useEffect(() => {
+    try {
+      const stored = window.localStorage.getItem(STORAGE_KEY);
+      if (stored === 'en' || stored === 'pt-BR') {
+        setLanguage(stored);
+        return;
+      }
+      if (navigator.language.toLowerCase().startsWith('pt')) {
+        setLanguage('pt-BR');
+      }
+    } catch {
+      /* storage unavailable */
+    }
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = language === 'pt-BR' ? 'pt-BR' : 'en';
+    try {
+      window.localStorage.setItem(STORAGE_KEY, language);
+    } catch {
+      /* storage unavailable */
+    }
+  }, [language]);
 
   const toggleLanguage = () => {
     setLanguage((prev) => (prev === 'en' ? 'pt-BR' : 'en'));

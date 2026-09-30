@@ -1,15 +1,19 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { poppins } from './fonts';
-import ThemeRegistry from '@/components/ThemeRegistry';
-import { LanguageProvider } from '@/contexts/LanguageContext';
+import type { Metadata, Viewport } from 'next';
+import { fontClassNames } from './fonts';
+import Providers from '@/components/providers/Providers';
+import 'lenis/dist/lenis.css';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
-
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: 'Pedro Amaral Chapelin Portfolio',
+  title: 'Pedro Chapelin — Full-Stack Developer',
+  description:
+    'Portfolio of Pedro Amaral Chapelin, Full-Stack developer working with Java, React, Computer Vision and Game Development.',
+};
+
+export const viewport: Viewport = {
+  themeColor: '#0a0a0a',
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -18,11 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
-      <body className={`${inter.className} ${poppins.variable}`}>
-        <LanguageProvider>
-          <ThemeRegistry>{children}</ThemeRegistry>
-        </LanguageProvider>
+    <html lang="en" className={fontClassNames}>
+      <body>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
