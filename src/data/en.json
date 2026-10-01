@@ -213,7 +213,7 @@
         "title": "ODS",
         "description": "OHXIDE Data System, a market intelligence platform for the petrochemical and plastics industry, with price history and projections, foreign trade data, a company database and watermarked PDF reports for each subscriber.",
         "image": "ods",
-        "url": "https://ohxide.com",
+        "url": "https://ohxide.com/dados-e-dashboard/",
         "category": "webDev",
         "tech": ["Spring Boot", "Next.js", "PostgreSQL"]
       },
