@@ -150,8 +150,7 @@
       "all": "All",
       "computerVision": "Computer Vision",
       "gameDev": "Game Dev",
-      "webDev": "Web",
-      "other": "Other"
+      "webDev": "Web"
     },
     "openLabel": "Open project",
     "list": [
@@ -201,22 +200,22 @@
         "tech": ["C", "Allegro"]
       },
       {
-        "slug": "fake-news-game",
-        "title": "Run From The Fake News",
-        "description": "A 1-4 player board game where the main objective is to run from fake news.",
-        "image": "fake-news-game",
-        "url": "https://github.com/amalra1/Fake-News-Game",
-        "category": "gameDev",
-        "tech": ["Game Design"]
+        "slug": "connectchem",
+        "title": "ConnectChem",
+        "description": "B2B marketplace connecting industrial buyers and suppliers of plastic and chemical inputs, with reverse auctions, a spot market for quick sales and a pay-per-action credit system.",
+        "image": "connectchem",
+        "url": "https://connectchem.com.br",
+        "category": "webDev",
+        "tech": ["Spring Boot", "Next.js", "PostgreSQL"]
       },
       {
-        "slug": "foda-se",
-        "title": "F*da-se",
-        "description": "Card game implemented in a Ring Network using C, up to 4 players connected on the same LAN.",
-        "image": "foda-se",
-        "url": "https://github.com/amalra1/F.da-seGame",
-        "category": "gameDev",
-        "tech": ["C", "Sockets"]
+        "slug": "ods",
+        "title": "ODS",
+        "description": "OHXIDE Data System, a market intelligence platform for the petrochemical and plastics industry, with price history and projections, foreign trade data, a company database and watermarked PDF reports for each subscriber.",
+        "image": "ods",
+        "url": "https://ohxide.com",
+        "category": "webDev",
+        "tech": ["Spring Boot", "Next.js", "PostgreSQL"]
       },
       {
         "slug": "portfolio",
@@ -235,42 +234,6 @@
         "url": "https://secret-santa.chapelin.com.br/",
         "category": "webDev",
         "tech": ["Web App"]
-      },
-      {
-        "slug": "graphs-processing-library",
-        "title": "Graphs Processing Library",
-        "description": "Series of functions to extract information of a given graph.",
-        "image": "graphs-processing-library",
-        "url": "https://github.com/amalra1/Graphs-Processing-Library",
-        "category": "other",
-        "tech": ["Algorithms"]
-      },
-      {
-        "slug": "game-of-life",
-        "title": "Game of Life",
-        "description": "Implementation of Conway's Game of Life, alongside an AI-driven technique to revert to a better previous state of the game, with fewer alive cells.",
-        "image": "game-of-life",
-        "url": "https://github.com/amalra1/GameOfLife",
-        "category": "other",
-        "tech": ["Cellular Automata", "AI"]
-      },
-      {
-        "slug": "redux-v",
-        "title": "Redux-V",
-        "description": "A processor made with Verilog.",
-        "image": "redux-v",
-        "url": "https://github.com/amalra1/Redux-V",
-        "category": "other",
-        "tech": ["Verilog"]
-      },
-      {
-        "slug": "polygon-generator",
-        "title": "Polygon Generator",
-        "description": "A polygon generator made with JavaScript.",
-        "image": "polygon-generator",
-        "url": "https://github.com/amalra1/PolygonGenerator",
-        "category": "other",
-        "tech": ["JavaScript"]
       }
     ]
   },

@@ -13,15 +13,11 @@ import umonctonLogo from '@/assets/logos/umoncton-logo.svg';
 
 import blocks from '@/assets/projects/blocks.webp';
 import bodybuilding from '@/assets/projects/bodybuilding-pose-classifier.webp';
-import fakeNews from '@/assets/projects/fake-news-game.webp';
-import fodaSe from '@/assets/projects/foda-se.webp';
-import gameOfLife from '@/assets/projects/game-of-life.webp';
-import graphs from '@/assets/projects/graphs-processing-library.webp';
+import connectchem from '@/assets/projects/connectchem.webp';
 import textureSegmentation from '@/assets/projects/image-texture-segmentation.webp';
+import ods from '@/assets/projects/ods.webp';
 import perspective from '@/assets/projects/perspective-transformation.webp';
-import polygon from '@/assets/projects/polygon-generator.webp';
 import portfolio from '@/assets/projects/portfolio.webp';
-import reduxV from '@/assets/projects/redux-v.webp';
 import secretSanta from '@/assets/projects/secret-santa.webp';
 import zanagotchi from '@/assets/projects/zanagotchi.webp';
 
@@ -44,15 +40,11 @@ export const logos: Record<string, StaticImageData> = {
 export const projectImages: Record<string, StaticImageData> = {
   blocks,
   'bodybuilding-pose-classifier': bodybuilding,
-  'fake-news-game': fakeNews,
-  'foda-se': fodaSe,
-  'game-of-life': gameOfLife,
-  'graphs-processing-library': graphs,
+  connectchem,
   'image-texture-segmentation': textureSegmentation,
+  ods,
   'perspective-transformation': perspective,
-  'polygon-generator': polygon,
   portfolio,
-  'redux-v': reduxV,
   'secret-santa': secretSanta,
   zanagotchi,
 };

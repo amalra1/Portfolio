@@ -7,13 +7,15 @@ import type { ProjectCategory } from '@/types/portfolio';
 import styles from './Projects.module.css';
 
 const DESKTOP_SLIDE_DISTANCE = 60;
+const COLOR_BAND_START = 'top 60%';
+const COLOR_BAND_END = 'bottom 40%';
 
 export function useProjectsAnimation(
   listRef: RefObject<HTMLUListElement | null>,
   category: ProjectCategory,
 ) {
   useMediaAnimation(
-    ({ desktop }) => {
+    ({ desktop, hover }) => {
       const list = listRef.current;
       if (!list) return;
       const items = list.querySelectorAll<HTMLElement>(`.${styles.item}`);
@@ -53,6 +55,17 @@ export function useProjectsAnimation(
           });
         },
       });
+      if (!hover) {
+        items.forEach((item) => {
+          const figure = item.querySelector(`.${styles.figure}`);
+          ScrollTrigger.create({
+            trigger: figure,
+            start: COLOR_BAND_START,
+            end: COLOR_BAND_END,
+            toggleClass: { targets: figure, className: styles.figureInView },
+          });
+        });
+      }
       requestAnimationFrame(() => ScrollTrigger.refresh());
     },
     { scope: listRef, dependencies: [category], revertOnUpdate: true },

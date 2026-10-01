@@ -150,8 +150,7 @@
       "all": "Tudo",
       "computerVision": "Visão Computacional",
       "gameDev": "Game Dev",
-      "webDev": "Web",
-      "other": "Outros"
+      "webDev": "Web"
     },
     "openLabel": "Abrir projeto",
     "list": [
@@ -201,22 +200,22 @@
         "tech": ["C", "Allegro"]
       },
       {
-        "slug": "fake-news-game",
-        "title": "Corra das Fake News",
-        "description": "Um jogo de tabuleiro para 1-4 jogadores onde o objetivo principal é fugir das fake news.",
-        "image": "fake-news-game",
-        "url": "https://github.com/amalra1/Fake-News-Game",
-        "category": "gameDev",
-        "tech": ["Game Design"]
+        "slug": "connectchem",
+        "title": "ConnectChem",
+        "description": "Marketplace B2B que conecta compradores e fornecedores industriais de insumos plásticos e químicos, com leilão reverso, mercado spot para vendas rápidas e um sistema de créditos cobrado por ação.",
+        "image": "connectchem",
+        "url": "https://connectchem.com.br",
+        "category": "webDev",
+        "tech": ["Spring Boot", "Next.js", "PostgreSQL"]
       },
       {
-        "slug": "foda-se",
-        "title": "F*da-se",
-        "description": "Jogo de cartas implementado em uma Rede em Anel usando C, para até 4 jogadores conectados na mesma rede LAN.",
-        "image": "foda-se",
-        "url": "https://github.com/amalra1/F.da-seGame",
-        "category": "gameDev",
-        "tech": ["C", "Sockets"]
+        "slug": "ods",
+        "title": "ODS",
+        "description": "OHXIDE Data System, plataforma de inteligência de mercado para os setores petroquímico e de plástico, com histórico e projeção de preços, dados de comércio exterior, base de empresas e relatórios em PDF com marca d'água por assinante.",
+        "image": "ods",
+        "url": "https://ohxide.com",
+        "category": "webDev",
+        "tech": ["Spring Boot", "Next.js", "PostgreSQL"]
       },
       {
         "slug": "portfolio",
@@ -235,42 +234,6 @@
         "url": "https://secret-santa.chapelin.com.br/",
         "category": "webDev",
         "tech": ["Web App"]
-      },
-      {
-        "slug": "graphs-processing-library",
-        "title": "Biblioteca de Processamento de Grafos",
-        "description": "Série de funções para extrair informações de um determinado grafo.",
-        "image": "graphs-processing-library",
-        "url": "https://github.com/amalra1/Graphs-Processing-Library",
-        "category": "other",
-        "tech": ["Algoritmos"]
-      },
-      {
-        "slug": "game-of-life",
-        "title": "Jogo da Vida",
-        "description": "Implementação do Jogo da Vida de Conway, junto com uma técnica de IA para reverter para um melhor estado anterior do jogo, com menos células vivas.",
-        "image": "game-of-life",
-        "url": "https://github.com/amalra1/GameOfLife",
-        "category": "other",
-        "tech": ["Autômatos Celulares", "IA"]
-      },
-      {
-        "slug": "redux-v",
-        "title": "Redux-V",
-        "description": "Um processador feito com Verilog.",
-        "image": "redux-v",
-        "url": "https://github.com/amalra1/Redux-V",
-        "category": "other",
-        "tech": ["Verilog"]
-      },
-      {
-        "slug": "polygon-generator",
-        "title": "Gerador de Polígonos",
-        "description": "Um gerador de polígonos feito com JavaScript.",
-        "image": "polygon-generator",
-        "url": "https://github.com/amalra1/PolygonGenerator",
-        "category": "other",
-        "tech": ["JavaScript"]
       }
     ]
   },

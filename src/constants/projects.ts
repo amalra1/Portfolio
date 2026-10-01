@@ -4,7 +4,6 @@ export const PROJECT_CATEGORY_ORDER: ProjectCategory[] = [
   'webDev',
   'computerVision',
   'gameDev',
-  'other',
   'all',
 ];
 

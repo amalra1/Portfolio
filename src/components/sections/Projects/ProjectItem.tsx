@@ -4,6 +4,7 @@ import { PROJECT_GLYPHS } from '@/constants/glyphs';
 import { cx } from '@/lib/classNames';
 import { glyphAt } from '@/lib/glyphs';
 import { padIndex } from '@/lib/format';
+import { useFitWords } from '@/hooks/useFitWords';
 import TribalGlyph from '@/components/ornaments/TribalGlyph/TribalGlyph';
 import ExternalLink from '@/components/ui/ExternalLink/ExternalLink';
 import type { ProjectItemProps } from '@/types/components/sections';
@@ -16,6 +17,7 @@ export default function ProjectItem({
   openLabel,
 }: ProjectItemProps) {
   const image = projectImages[project.image];
+  const titleRef = useFitWords<HTMLSpanElement>();
 
   return (
     <li className={styles.item}>
@@ -40,7 +42,9 @@ export default function ProjectItem({
 
         <span className={styles.body}>
           <span className={styles.head}>
-            <span className={cx(styles.title, 'display')}>{project.title}</span>
+            <span ref={titleRef} className={cx(styles.title, 'display')}>
+              {project.title}
+            </span>
             <span className={styles.arrow} aria-hidden="true">
               ↗
             </span>
