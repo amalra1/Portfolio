@@ -242,6 +242,11 @@
     "title": ["Vamos", "conversar"],
     "subtitle": "Vamos trabalhar juntos para atingir nossos objetivos e aprender muito no processo.",
     "email": "chapelinpedro@gmail.com",
+    "whatsapp": {
+      "label": "WhatsApp",
+      "number": "+55 41 98720-3883",
+      "url": "https://wa.me/5541987203883"
+    },
     "socials": [
       {
         "name": "LinkedIn",

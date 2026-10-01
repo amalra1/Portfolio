@@ -109,13 +109,11 @@
   color: var(--bg);
 }
 
-.email {
+.direct {
   display: inline-block;
   width: fit-content;
-  font-size: var(--step-2);
   font-weight: 600;
   letter-spacing: -0.02em;
-  overflow-wrap: anywhere;
   background-image: linear-gradient(var(--red), var(--red));
   background-repeat: no-repeat;
   background-size: 0% 3px;
@@ -124,8 +122,29 @@
   transition: background-size var(--dur) var(--ease-out);
 }
 
-.email:hover {
+.direct:hover {
   background-size: 100% 3px;
+}
+
+.email {
+  font-size: var(--step-2);
+  overflow-wrap: anywhere;
+}
+
+.whatsapp {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.6em;
+  font-size: var(--step-1);
+  white-space: nowrap;
+}
+
+.channel {
+  font-size: var(--step--1);
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--fg-dim);
 }
 
 .socials {

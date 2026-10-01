@@ -61,9 +61,21 @@ export default function Contact({ data, footer, name }: ContactProps) {
             )}
           </div>
           <div className={styles.right}>
-            <a href={`mailto:${data.email}`} className={styles.email}>
+            <a
+              href={`mailto:${data.email}`}
+              className={cx(styles.direct, styles.email)}
+            >
               {data.email}
             </a>
+            <ExternalLink
+              href={data.whatsapp.url}
+              className={cx(styles.direct, styles.whatsapp)}
+            >
+              <span className={cx(styles.channel, 'mono')}>
+                {data.whatsapp.label}
+              </span>
+              {data.whatsapp.number}
+            </ExternalLink>
             <ul className={cx(styles.socials, 'mono')}>
               {data.socials.map((social) => (
                 <li key={social.name}>
