@@ -229,7 +229,7 @@
       {
         "slug": "secret-santa",
         "title": "Amigo Secreto",
-        "description": "Aplicação para sortear amigo secreto com os amigos, para até 20 pessoas.",
+        "description": "Sorteie o amigo secreto e guarde o segredo, sem cadastro. Suporta até 30 pessoas.",
         "image": "secret-santa",
         "url": "https://secret-santa.chapelin.com.br/",
         "category": "webDev",

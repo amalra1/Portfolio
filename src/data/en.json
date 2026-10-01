@@ -229,7 +229,7 @@
       {
         "slug": "secret-santa",
         "title": "Secret Santa",
-        "description": "Sort a friend to gift using Secret Santa, up to 20 names max.",
+        "description": "Draw names for a Secret Santa and keep the secret, no sign-up needed. Supports up to 30 people.",
         "image": "secret-santa",
         "url": "https://secret-santa.chapelin.com.br/",
         "category": "webDev",
