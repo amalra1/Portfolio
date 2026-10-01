@@ -9,6 +9,8 @@ const FIGURE_HEIGHT = 610;
 const JPEG_QUALITY = 82;
 const RED = '#b5121b';
 const INK = '#0f0b0b';
+const PAPER = '#f2ede4';
+const CALL_TO_ACTION = 'SEE MY WORK';
 const TONES = [
   [0.06, 0.04, 0.04],
   [0.42, 0.03, 0.05],
@@ -74,6 +76,43 @@ function word(text, style) {
   );
 }
 
+function arrow() {
+  return h(
+    'svg',
+    { width: 30, height: 30, viewBox: '0 0 24 24' },
+    h('path', {
+      d: 'M5 12h13M12 5l7 7-7 7',
+      stroke: PAPER,
+      strokeWidth: 3,
+      fill: 'none',
+    }),
+  );
+}
+
+function callToAction() {
+  return h(
+    'div',
+    {
+      style: {
+        position: 'absolute',
+        top: 150,
+        right: 52,
+        display: 'flex',
+        alignItems: 'center',
+        gap: 14,
+        padding: '14px 22px',
+        background: INK,
+        color: PAPER,
+        fontFamily: 'Anton',
+        fontSize: 36,
+        lineHeight: 1,
+      },
+    },
+    CALL_TO_ACTION,
+    arrow(),
+  );
+}
+
 const [figure, font] = await Promise.all([tintedFigure(), antonFont()]);
 const figureSrc = `data:image/png;base64,${figure.toString('base64')}`;
 const { width: figureWidth } = await sharp(figure).metadata();
@@ -104,6 +143,7 @@ const card = h(
   word('CHAPELIN', { bottom: 24, right: 48, fontSize: 250 }),
   word('FULL-STACK DEVELOPER', { top: 52, right: 52, fontSize: 34 }),
   word('CHAPELIN.COM.BR', { top: 96, right: 52, fontSize: 34 }),
+  callToAction(),
 );
 
 const response = new ImageResponse(card, {
