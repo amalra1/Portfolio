@@ -240,8 +240,8 @@
         "title": "MimiShow",
         "description": "Um jogo de mímica para um celular e uma plateia inteira. A Mimi, uma sombra com máscara de teatro, escolhe quem atua, sorteia a palavra secreta, controla o tempo e marca os pontos. Sem cadastro, sem servidor.",
         "image": "mimishow",
-        "url": "https://github.com/amalra1/Mimishow",
-        "category": "gameDev",
+        "url": "https://mimishow.chapelin.com.br/",
+        "category": "webDev",
         "tech": ["Next.js", "TypeScript", "GSAP"]
       }
     ]

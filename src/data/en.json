@@ -240,8 +240,8 @@
         "title": "MimiShow",
         "description": "A charades game show for one phone and a whole crowd. Mimi, a shadow with a theatre mask, picks who acts, draws the secret word, runs the timer and keeps the score. No sign-up, no server.",
         "image": "mimishow",
-        "url": "https://github.com/amalra1/Mimishow",
-        "category": "gameDev",
+        "url": "https://mimishow.chapelin.com.br/",
+        "category": "webDev",
         "tech": ["Next.js", "TypeScript", "GSAP"]
       }
     ]
