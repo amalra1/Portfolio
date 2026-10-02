@@ -15,6 +15,7 @@ import blocks from '@/assets/projects/blocks.webp';
 import bodybuilding from '@/assets/projects/bodybuilding-pose-classifier.webp';
 import connectchem from '@/assets/projects/connectchem.webp';
 import textureSegmentation from '@/assets/projects/image-texture-segmentation.webp';
+import mimishow from '@/assets/projects/mimishow.webp';
 import ods from '@/assets/projects/ods.webp';
 import perspective from '@/assets/projects/perspective-transformation.webp';
 import portfolio from '@/assets/projects/portfolio.webp';
@@ -42,6 +43,7 @@ export const projectImages: Record<string, StaticImageData> = {
   'bodybuilding-pose-classifier': bodybuilding,
   connectchem,
   'image-texture-segmentation': textureSegmentation,
+  mimishow,
   ods,
   'perspective-transformation': perspective,
   portfolio,
