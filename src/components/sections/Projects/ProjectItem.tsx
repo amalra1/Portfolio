@@ -1,5 +1,7 @@
+import { useRef } from 'react';
 import Image from 'next/image';
 import { projectImages } from '@/data/images';
+import { projectVideos } from '@/data/videos';
 import { PROJECT_GLYPHS } from '@/constants/glyphs';
 import { cx } from '@/lib/classNames';
 import { glyphAt } from '@/lib/glyphs';
@@ -8,6 +10,7 @@ import { useFitWords } from '@/hooks/useFitWords';
 import TribalGlyph from '@/components/ornaments/TribalGlyph/TribalGlyph';
 import ExternalLink from '@/components/ui/ExternalLink/ExternalLink';
 import type { ProjectItemProps } from '@/types/components/sections';
+import ProjectVideo from './ProjectVideo';
 import styles from './Projects.module.css';
 
 export default function ProjectItem({
@@ -17,10 +20,12 @@ export default function ProjectItem({
   openLabel,
 }: ProjectItemProps) {
   const image = projectImages[project.image];
+  const video = projectVideos[project.image];
+  const itemRef = useRef<HTMLLIElement>(null);
   const titleRef = useFitWords<HTMLSpanElement>();
 
   return (
-    <li className={styles.item}>
+    <li ref={itemRef} className={styles.item}>
       <ExternalLink
         href={project.url}
         className={styles.link}
@@ -38,6 +43,7 @@ export default function ProjectItem({
               loading="lazy"
             />
           )}
+          {video && <ProjectVideo src={video} triggerRef={itemRef} />}
         </span>
 
         <span className={styles.body}>

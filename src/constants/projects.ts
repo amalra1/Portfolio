@@ -2,6 +2,7 @@ import type { ProjectCategory } from '@/types/portfolio';
 
 export const PROJECT_CATEGORY_ORDER: ProjectCategory[] = [
   'webDev',
+  'mobile',
   'computerVision',
   'gameDev',
   'all',

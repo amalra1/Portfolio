@@ -1,3 +1,4 @@
+import type { RefObject } from 'react';
 import type {
   AboutData,
   ContactData,
@@ -46,6 +47,11 @@ export interface ProjectItemProps {
   index: number;
   categoryLabel: string;
   openLabel: string;
+}
+
+export interface ProjectVideoProps {
+  src: string;
+  triggerRef: RefObject<HTMLElement | null>;
 }
 
 export interface ContactProps {

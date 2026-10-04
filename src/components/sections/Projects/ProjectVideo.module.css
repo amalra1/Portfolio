@@ -1,0 +1,20 @@
+.video {
+  --phone-slot-left: 37.8125%;
+  --phone-slot-top: 7.6%;
+  --phone-slot-width: 24.375%;
+  --phone-slot-height: 84.8%;
+
+  position: absolute;
+  left: var(--phone-slot-left);
+  top: var(--phone-slot-top);
+  width: var(--phone-slot-width);
+  height: var(--phone-slot-height);
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur) var(--ease-out);
+}
+
+.playing {
+  opacity: 1;
+}

@@ -150,6 +150,7 @@
       "all": "Tudo",
       "computerVision": "Visão Computacional",
       "gameDev": "Game Dev",
+      "mobile": "Mobile",
       "webDev": "Web"
     },
     "openLabel": "Abrir projeto",
@@ -243,6 +244,15 @@
         "url": "https://mimishow.chapelin.com.br/",
         "category": "webDev",
         "tech": ["Next.js", "TypeScript", "GSAP"]
+      },
+      {
+        "slug": "prometi",
+        "title": "Prometi",
+        "description": "Você prometeu alguma coisa. Um app iOS que guarda todo mundo que vai ganhar presente da viagem e o que cada um vai receber. Tudo fica no aparelho, em seis idiomas.",
+        "image": "prometi",
+        "url": "https://github.com/amalra1/prometi",
+        "category": "mobile",
+        "tech": ["Swift", "SwiftUI", "SwiftData"]
       }
     ]
   },

@@ -19,6 +19,7 @@ import mimishow from '@/assets/projects/mimishow.webp';
 import ods from '@/assets/projects/ods.webp';
 import perspective from '@/assets/projects/perspective-transformation.webp';
 import portfolio from '@/assets/projects/portfolio.webp';
+import prometi from '@/assets/projects/prometi.webp';
 import secretSanta from '@/assets/projects/secret-santa.webp';
 import zanagotchi from '@/assets/projects/zanagotchi.webp';
 
@@ -47,6 +48,7 @@ export const projectImages: Record<string, StaticImageData> = {
   ods,
   'perspective-transformation': perspective,
   portfolio,
+  prometi,
   'secret-santa': secretSanta,
   zanagotchi,
 };
