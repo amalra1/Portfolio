@@ -253,6 +253,15 @@
         "url": "https://github.com/amalra1/prometi",
         "category": "mobile",
         "tech": ["Swift", "SwiftUI", "SwiftData"]
+      },
+      {
+        "slug": "circuit-breaker",
+        "title": "Circuit Breaker",
+        "description": "A web puzzle inspired by the circuit panel from the police station in Resident Evil 2. Rotate the blocks of a 4 × 6 board until the power from both origins reaches the destination. Five panels, plus a random solvable one every time you play.",
+        "image": "circuit-breaker",
+        "url": "https://circuit-breaker.chapelin.com.br/",
+        "category": "gameDev",
+        "tech": ["React", "TypeScript", "Vite"]
       }
     ]
   },

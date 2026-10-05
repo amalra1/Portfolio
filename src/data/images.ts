@@ -13,6 +13,7 @@ import umonctonLogo from '@/assets/logos/umoncton-logo.svg';
 
 import blocks from '@/assets/projects/blocks.webp';
 import bodybuilding from '@/assets/projects/bodybuilding-pose-classifier.webp';
+import circuitBreaker from '@/assets/projects/circuit-breaker.webp';
 import connectchem from '@/assets/projects/connectchem.webp';
 import textureSegmentation from '@/assets/projects/image-texture-segmentation.webp';
 import mimishow from '@/assets/projects/mimishow.webp';
@@ -42,6 +43,7 @@ export const logos: Record<string, StaticImageData> = {
 export const projectImages: Record<string, StaticImageData> = {
   blocks,
   'bodybuilding-pose-classifier': bodybuilding,
+  'circuit-breaker': circuitBreaker,
   connectchem,
   'image-texture-segmentation': textureSegmentation,
   mimishow,
