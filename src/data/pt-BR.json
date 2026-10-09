@@ -262,6 +262,14 @@
         "url": "https://circuit-breaker.chapelin.com.br/",
         "category": "gameDev",
         "tech": ["React", "TypeScript", "Vite"]
+      },
+      {
+        "slug": "botanical-vault",
+        "title": "Cofre das Plantas",
+        "description": "Minha namorada é arquiteta e, para fazer as colagens, pegava os PNGs de plantas de uma pasta guardada no próprio computador. Criei este sistema para deixar essa biblioteca organizada e segura. Busca por nome popular ou científico, filtros por tipo, origem, porte, vista e luz, coleções por projeto e download de uma coleção em ZIP.",
+        "image": "botanical-vault",
+        "category": "webDev",
+        "tech": ["Next.js", "Spring Boot", "PostgreSQL"]
       }
     ]
   },

@@ -85,3 +85,7 @@ Every ornament on the site is an original SVG drawn for this project.
 <p align="center">
   <sub>spark · compass · saw · eye · jaw · crown · chevrons · sigil · koru</sub>
 </p>
+
+<p align="center">
+  <sub>Plant images in the Botanical Vault screenshot: <a href="https://pngimg.com">pngimg.com</a> (CC BY-NC 4.0)</sub>
+</p>

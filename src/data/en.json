@@ -262,6 +262,14 @@
         "url": "https://circuit-breaker.chapelin.com.br/",
         "category": "gameDev",
         "tech": ["React", "TypeScript", "Vite"]
+      },
+      {
+        "slug": "botanical-vault",
+        "title": "Botanical Vault",
+        "description": "My girlfriend is an architect, and for her collages she used to pick plant PNGs from a folder kept on her own computer. I built this system to keep that library organized and safe. Search by common or scientific name, filter by type, origin, size, view and light, group plants into project collections and download a collection as a ZIP.",
+        "image": "botanical-vault",
+        "category": "webDev",
+        "tech": ["Next.js", "Spring Boot", "PostgreSQL"]
       }
     ]
   },
