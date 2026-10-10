@@ -59,3 +59,9 @@ export interface ContactProps {
   footer: FooterData;
   name: PersonName;
 }
+
+export interface HeroGithubLinkProps {
+  label: string;
+  url: string;
+  className?: string;
+}

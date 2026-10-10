@@ -7,6 +7,7 @@
     "location": "Curitiba, Brasil",
     "tagline": "Curto coisas maneiras e deixar o que é chato mais legal.",
     "scrollCue": "Rolar",
+    "github": { "label": "GitHub", "url": "https://github.com/amalra1" },
     "marquee": [
       "Full-Stack",
       "Java",

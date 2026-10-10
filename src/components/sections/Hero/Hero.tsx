@@ -7,6 +7,7 @@ import { heroImage, heroInk } from '@/data/images';
 import { cx } from '@/lib/classNames';
 import TribalSun from '@/components/ornaments/TribalSun/TribalSun';
 import type { HeroProps } from '@/types/components/sections';
+import HeroGithubLink from './HeroGithubLink';
 import HeroTintFilter from './HeroTintFilter';
 import { useHeroAnimation } from './useHeroAnimation';
 import styles from './Hero.module.css';
@@ -71,6 +72,11 @@ export default function Hero({ data }: HeroProps) {
           {data.scrollCue}
         </span>
         <p className={styles.tagline}>{data.tagline}</p>
+        <HeroGithubLink
+          label={data.github.label}
+          url={data.github.url}
+          className={styles.github}
+        />
       </div>
     </section>
   );

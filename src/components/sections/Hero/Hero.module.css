@@ -165,3 +165,7 @@
     font-size: clamp(6rem, 12.4vw, 15rem);
   }
 }
+
+.github {
+  margin-left: auto;
+}

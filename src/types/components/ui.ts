@@ -6,3 +6,7 @@ export interface ExternalLinkProps extends Omit<
 > {
   href: string;
 }
+
+export interface IconProps {
+  className?: string;
+}

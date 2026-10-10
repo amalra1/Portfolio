@@ -7,6 +7,7 @@
     "location": "Curitiba, Brazil",
     "tagline": "I like cool things and to make boring stuff cooler.",
     "scrollCue": "Scroll",
+    "github": { "label": "GitHub", "url": "https://github.com/amalra1" },
     "marquee": [
       "Full-Stack",
       "Java",
